@@ -1,18 +1,18 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 
-import { AuthComponent } from "./auth/auth.component";
+import { AuthComponent } from "./auth-component/auth.component";
 
-const authenticationRouterConfig: Routes = [
+const authRouterConfig: Routes = [
     { path: '', component: AuthComponent }
 ];
 
 @NgModule({
     imports: [
-        RouterModule.forChild(authenticationRouterConfig)
+        RouterModule.forChild(authRouterConfig)
     ],
     exports: [
         RouterModule
     ]
 })
-export class AuthenticationRoutingModule {}
+export class AuthRoutingModule {}
