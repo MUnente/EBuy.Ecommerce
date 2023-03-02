@@ -2,6 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-auth',
-  templateUrl: './auth.component.html',
+  templateUrl: './login.component.html',
 })
-export class AuthComponent {}
+export class LoginComponent {}

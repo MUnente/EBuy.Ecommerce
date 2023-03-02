@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   styles: [
   ]
 })
-export class HomeComponent {
-  overdose: string = 'dorgas ilicitas'
-}
+export class HomeComponent {}

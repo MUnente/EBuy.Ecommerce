@@ -1,0 +1,28 @@
+<app-logo-center></app-logo-center>
+
+<div class="container w-50 mt-5">
+
+  <div class="tab-content">
+    <form>
+      <h2 class="text-center">Faça o seu login:</h2>
+
+      <div class="form-outline mb-4">
+        <label class="form-label" for="loginName">E-mail</label>
+        <input type="email" id="loginName" class="form-control" />
+      </div>
+
+      <div class="form-outline mb-4">
+        <label class="form-label" for="loginPassword">Senha</label>
+        <input type="password" id="loginPassword" class="form-control" />
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary btn-block mb-4 w-25">Entrar</button>
+      </div>
+
+      <div class="text-center">
+        <p>Não possui uma conta? <a [routerLink]="['/auth/register']" rel="">Cadastrar</a></p>
+      </div>
+    </form>
+  </div>
+</div>
