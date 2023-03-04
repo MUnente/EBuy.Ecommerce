@@ -15,4 +15,4 @@ const homeRouterConfig: Routes = [
         RouterModule
     ]
 })
-export class HomeRoutingModule {}
+export class HomeRoutingModule { }

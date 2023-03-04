@@ -14,4 +14,4 @@ import { CarouselComponent } from './carousel-component/carousel.component';
     CarouselComponent
   ]
 })
-export class CarouselModule {}
+export class CarouselModule { }

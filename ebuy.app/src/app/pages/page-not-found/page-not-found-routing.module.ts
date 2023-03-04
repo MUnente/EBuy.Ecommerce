@@ -14,4 +14,4 @@ const pageNotFoundRouterConfig: Routes = [
         RouterModule
     ]
 })
-export class PageNotFoundRoutingModule {}
+export class PageNotFoundRoutingModule { }

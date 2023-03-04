@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   styles: [
   ]
 })
-export class RegisterComponent {}
+export class RegisterComponent { }
