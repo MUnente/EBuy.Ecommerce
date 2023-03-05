@@ -4,42 +4,45 @@
     <div class="tab-content">
         <form>
             <h2 class="text-center">Faça o seu cadastro:</h2>
-    
+
             <div class="form-outline mb-4">
                 <label class="form-label" for="registerName">Nome completo</label>
                 <input type="text" id="registerName" class="form-control" />
             </div>
-    
+
             <div class="form-outline mb-4">
                 <label class="form-label" for="registerEmail">E-mail</label>
                 <input type="email" id="registerEmail" class="form-control" />
             </div>
-    
+
             <div class="form-outline mb-4">
                 <label class="form-label" for="registerPassword">Senha</label>
                 <input type="password" id="registerPassword" class="form-control" />
             </div>
-    
+
             <div class="form-outline mb-4">
                 <label class="form-label" for="registerRepeatPassword">Confirme sua senha</label>
                 <input type="password" id="registerRepeatPassword" class="form-control" />
             </div>
-    
+
             <div class="form-check d-flex justify-content-start mb-4">
-                <input class="form-check-input me-2" type="checkbox" value="" id="registerCheck" checked
+                <input class="form-check-input me-2" type="checkbox" id="registerCheck"
                     aria-describedby="registerCheckHelpText" />
                 <label class="form-check-label" for="registerCheck">
-                    <a href="#">Eu li e aceito os termos de uso</a>
+                    <p class="d-inline text-decoration-underline text-primary" data-bs-toggle="modal"
+                        data-bs-target="#modalComponent" style="cursor: pointer;">Eu li e aceito os termos de uso</p>
                 </label>
             </div>
-    
+
             <div class="d-flex justify-content-center">
                 <button type="submit" class="btn btn-primary btn-block mb-3">Cadastrar</button>
             </div>
 
             <div class="text-center">
                 <p>Já possui uma conta? <a [routerLink]="['/auth/login']" rel="">Entrar</a></p>
-              </div>
+            </div>
         </form>
     </div>
 </div>
+
+<app-terms-modal></app-terms-modal>
