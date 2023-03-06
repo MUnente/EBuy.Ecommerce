@@ -1,5 +1,58 @@
 <app-top-menu></app-top-menu>
-<div class="main-container">
-    <p>product-details works!</p>
+<div class="main-container container">
+    <h2 class="fs-3 my-4">Detalhes do produto</h2>
+
+    <div class="d-flex">
+        <div class="d-flex align-items-center">
+            <div class="carouselSide d-flex flex-column">
+                <i class="fa-solid fa-arrow-up button-arrow text-center"></i>
+                <ul class="product-image-list">
+                    <li class="img-option" (click)="changeImg($event.target)">
+                        <img src="../../../../assets/products/s22ultra_black/s22ultra-black-main.webp" alt="" class="img-button">
+                    </li>
+                    <li class="img-option" (click)="changeImg($event.target)">
+                        <img src="../../../../assets/products/s22ultra_black/s22ultra_black-facing.webp" alt="" class="img-button">
+                    </li>
+                    <li class="img-option" (click)="changeImg($event.target)">
+                        <img src="../../../../assets/products/s22ultra_black/s22ultra_black-onlyPhone.webp" alt="" class="img-button">
+                    </li>
+                    <li class="img-option" (click)="changeImg($event.target)">
+                        <img src="../../../../assets/products/s22ultra_black/s22ultra_black-backwards.webp" alt="" class="img-button">
+                    </li>
+                </ul>
+                <i class="fa-solid fa-arrow-down button-arrow text-center"></i>
+            </div>
+        
+            <div class="img-expand">
+                <img src="../../../../assets/products/s22ultra_black/s22ultra-black-main.webp" alt="">
+            </div>
+        </div>
+
+        <div class="content d-flex flex-column justify-content-between">
+            <div class="product-info">
+                <h3 class="fs-4">Samsung Galaxy S22 Ultra Black</h3>
+                <p class="brand-name">Fabricante: <a href="#">Samsung</a></p>
+                <p class="product-description">O Smartphone possuí uma capacidade de armazenamento de 256GB, Dual Chip com tecnologia 5G, processador Octa-Core Snapdragon 8 Gen 1 uma memória RAM de 12GB, permitindo o dispositivo funcionar da melhor maneira possível.</p>
+            </div>
+
+            <p class="product-price">Por apenas:<br><span class="fs-4 fw-bold">R$ 4.299,99</span></p>
+
+            <div class="product-value">
+                <div class="d-flex justify-content-between">
+                    <div class="quantity-field">
+                        <label for="quantity">Quantidade:</label>
+                        <input class="form-control" type="number" name="quantity" id="txtQuantity" max="9999" min="1" maxlength="4" value="1">
+                    </div>
+    
+                    <button class="btn btn-primary">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Adicionar ao carrinho
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 </div>
 <app-footer></app-footer>
