@@ -4,9 +4,14 @@ import { CommonModule } from '@angular/common';
 import { ProductsRoutingModule } from './products-routing.module';
 import { NavigationModule } from 'src/app/components/navigation/navigation.module';
 import { ProductCardModule } from 'src/app/components/product-card/product-card.module';
+import { VerticalSliderModule } from 'src/app/components/vertical-slider/vertical-slider.module';
 
 import { ProductsComponent } from './products-component/products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
+
+import { registerLocaleData } from "@angular/common";
+import localePt from '@angular/common/locales/pt';
+registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
@@ -17,7 +22,8 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     CommonModule,
     ProductsRoutingModule,
     NavigationModule,
-    ProductCardModule
+    ProductCardModule,
+    VerticalSliderModule
   ]
 })
 export class ProductsModule { }

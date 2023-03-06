@@ -3,42 +3,16 @@
     <h2 class="fs-3 my-4">Detalhes do produto</h2>
 
     <div class="d-flex">
-        <div class="d-flex align-items-center">
-            <div class="carouselSide d-flex flex-column">
-                <i class="fa-solid fa-arrow-up button-arrow text-center"></i>
-                <ul class="product-image-list">
-                    <li class="img-option" (click)="changeImg($event.target)">
-                        <img src="../../../../assets/products/s22ultra_black/s22ultra-black-main.webp" alt="" class="img-button">
-                    </li>
-                    <li class="img-option" (click)="changeImg($event.target)">
-                        <img src="../../../../assets/products/s22ultra_black/s22ultra_black-facing.webp" alt="" class="img-button">
-                    </li>
-                    <li class="img-option" (click)="changeImg($event.target)">
-                        <img src="../../../../assets/products/s22ultra_black/s22ultra_black-onlyPhone.webp" alt="" class="img-button">
-                    </li>
-                    <li class="img-option" (click)="changeImg($event.target)">
-                        <img src="../../../../assets/products/s22ultra_black/s22ultra_black-backwards.webp" alt="" class="img-button">
-                    </li>
-                    <li class="img-option" (click)="changeImg($event.target)">
-                        <img src="../../../../assets/products/s22ultra_black/s22ultra-green.webp" alt="" class="img-button">
-                    </li>
-                </ul>
-                <i class="fa-solid fa-arrow-down button-arrow text-center"></i>
-            </div>
-        
-            <div class="img-expand">
-                <img src="../../../../assets/products/s22ultra_black/s22ultra-black-main.webp" alt="">
-            </div>
-        </div>
+        <app-vertical-slider [images]="product.imagens"></app-vertical-slider>
 
         <div class="content d-flex flex-column justify-content-between">
             <div class="product-info">
-                <h3 class="fs-4">Samsung Galaxy S22 Ultra Black</h3>
-                <p class="brand-name">Fabricante: <a href="#">Samsung</a></p>
-                <p class="product-description">O Smartphone possuí uma capacidade de armazenamento de 256GB, Dual Chip com tecnologia 5G, processador Octa-Core Snapdragon 8 Gen 1 uma memória RAM de 12GB, permitindo o dispositivo funcionar da melhor maneira possível.</p>
+                <h3 class="fs-4">{{ product.nome }}</h3>
+                <p class="brand-name">Fabricante: <a href="#">{{ product.marca.nome }}</a></p>
+                <p class="product-description">{{ product.descricao }}</p>
             </div>
 
-            <p class="product-price">Por apenas:<br><span class="fs-4 fw-bold">R$ 4.299,99</span></p>
+            <p class="product-price">Por apenas:<br><span class="fs-4 fw-bold">{{ product.valor | currency:'BRL':'symbol':'1.2-2':'pt' }}</span></p>
 
             <div class="product-value">
                 <div class="d-flex justify-content-between">

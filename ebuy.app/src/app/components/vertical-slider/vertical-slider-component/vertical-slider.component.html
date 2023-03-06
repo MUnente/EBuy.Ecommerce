@@ -1,0 +1,15 @@
+<div class="d-flex align-items-center">
+    <div class="d-flex flex-column">
+        <i class="fa-solid fa-arrow-up button-arrow text-center"></i>
+        <ul class="product-image-list">
+            <li *ngFor="let image of images" class="img-option" (click)="changeImg($event.target)">
+                <img [src]="image.dir" class="img-button">
+            </li>
+        </ul>
+        <i class="fa-solid fa-arrow-down button-arrow text-center"></i>
+    </div>
+
+    <div class="img-expand">
+        <img [src]="[!images.length ? '../../../../assets/image-not-found.jpg' : images[0].dir]">
+    </div>
+</div>
