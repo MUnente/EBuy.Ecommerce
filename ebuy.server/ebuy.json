@@ -70,7 +70,7 @@
             "id": 5,
             "nome": "Apple Watch SE",
             "descricao": "A caixa de alumínio é leve e feita com uma liga de alumínio aeroespacial 100% reciclado. A pulseira esportiva é feita de fluorelastômero resistente e surpreendentemente macio e vem com um fecho inovador, em forma de pino. Requer iPhone 8 ou posterior com iOS 16 ou posterior. Atenção: não vem com adaptador de energia.",
-            "valor": 3.799,
+            "valor": 3799,
             "marca": { "id": 4, "nome": "Apple" },
             "categories": [
                 { "id": 1, "nome": "Eletrônico" },
