@@ -1,0 +1,8 @@
+.card-img-top {
+    height: 16rem;
+}
+
+.card-footer {
+    background-color: transparent;
+    border-top: none;
+}

@@ -11,7 +11,7 @@ export class VerticalSliderComponent implements AfterViewInit {
   constructor(private elementRef: ElementRef) {}
 
   @Input()
-  images!: ProductImage[];
+  images: ProductImage[] | undefined;
   
   changeImg(image: any): void {
     this.elementRef.nativeElement.querySelector('.img-expand > img').src = image.getAttribute('src');

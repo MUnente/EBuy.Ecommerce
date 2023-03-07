@@ -10,6 +10,6 @@
     </div>
 
     <div class="img-expand">
-        <img [src]="[!images.length ? '../../../../assets/image-not-found.jpg' : images[0].dir]">
+        <img [src]="[!images?.length ? '../../../../assets/image-not-found.jpg' : images?.[0]?.dir]">
     </div>
 </div>

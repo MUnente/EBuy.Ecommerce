@@ -1,27 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.css']
 })
-export class ProductDetailsComponent  {
-  public product: Product = {
-    id: 1,
-    nome: 'Samsung Galaxy S22 Ultra Black',
-    descricao: 'O Smartphone possuí uma capacidade de armazenamento de 256GB, Dual Chip com tecnologia 5G, processador Octa-Core Snapdragon 8 Gen 1 uma memória RAM de 12GB, permitindo o dispositivo funcionar da melhor maneira possível.',
-    valor: 4299.99,
-    marca: { id: 1, nome: 'Samsung' },
-    categories: [
-      { id: 1, nome: 'Eletrônico' }
-    ],
-    imagens: [
-      { id: null, dir: '../../../../assets/products/s22ultra_black/s22ultra-black-main.webp' },
-      { id: null, dir: '../../../../assets/products/s22ultra_black/s22ultra_black-facing.webp' },
-      { id: null, dir: '../../../../assets/products/s22ultra_black/s22ultra_black-onlyPhone.webp' },
-      { id: null, dir: '../../../../assets/products/s22ultra_black/s22ultra_black-backwards.webp' },
-      { id: null, dir: '../../../../assets/products/s22ultra_black/s22ultra-green.webp' },
-    ]
+export class ProductDetailsComponent implements OnInit {
+  constructor(private activatedRoute: ActivatedRoute, private productService: ProductService, private router: Router) { }
+
+  public product!: Product;
+
+  ngOnInit(): void {
+    this.activatedRoute.params.subscribe(params => {
+      this.productService.getProduct(params['id'].toString()).subscribe({
+        next: data => this.product = data,
+        error: error => console.error(error)
+      });
+    });
   };
 }
