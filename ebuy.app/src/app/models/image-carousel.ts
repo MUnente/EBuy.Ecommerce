@@ -3,4 +3,4 @@ export interface Image {
     interval: number;
     alt: string;
     active: boolean;
-};
+}

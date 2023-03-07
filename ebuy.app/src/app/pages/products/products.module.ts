@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { registerLocaleData } from "@angular/common";
 import localePt from '@angular/common/locales/pt';
@@ -14,6 +15,7 @@ import { ProductsComponent } from './products-component/products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 
 import { ProductService } from 'src/app/services/product.service';
+import { CartService } from 'src/app/services/cart.service';
 
 registerLocaleData(localePt);
 
@@ -25,13 +27,15 @@ registerLocaleData(localePt);
   imports: [
     CommonModule,
     ProductsRoutingModule,
+    HttpClientModule,
+    FormsModule,
     NavigationModule,
     ProductCardModule,
-    VerticalSliderModule,
-    HttpClientModule
+    VerticalSliderModule
   ],
   providers: [
-    ProductService
+    ProductService,
+    CartService
   ]
 })
 export class ProductsModule { }

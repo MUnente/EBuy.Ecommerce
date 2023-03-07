@@ -18,10 +18,20 @@
                 <div class="d-flex justify-content-between">
                     <div class="quantity-field">
                         <label for="quantity">Quantidade:</label>
-                        <input class="form-control" type="number" name="quantity" id="txtQuantity" max="9999" min="1" maxlength="4" value="1">
+                        <input 
+                            class="form-control" 
+                            type="number" 
+                            name="quantity" 
+                            id="txtQuantity" 
+                            max="9999" 
+                            min="1" 
+                            maxlength="4" 
+                            value="1"
+                            [(ngModel)]="quantity"
+                        >
                     </div>
     
-                    <button class="btn btn-primary">
+                    <button class="btn btn-primary" type="button" (click)="addProductInCart()">
                         <i class="fa-solid fa-cart-shopping"></i>
                         Adicionar ao carrinho
                     </button>

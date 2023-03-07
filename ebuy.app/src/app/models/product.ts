@@ -10,4 +10,4 @@ export interface Product {
     valor: number,
     imagens: ProductImage[];
     categories: Category[];
-};
+}
