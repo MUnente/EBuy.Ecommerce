@@ -1,0 +1,86 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "nome": "Samsung Galaxy S22 Ultra Black",
+            "descricao": "O Smartphone possuí uma capacidade de armazenamento de 256GB, Dual Chip com tecnologia 5G, processador Octa-Core Snapdragon 8 Gen 1 uma memória RAM de 12GB, permitindo o dispositivo funcionar da melhor maneira possível.",
+            "valor": 4299.99,
+            "marca": { "id": 1, "nome": "Samsung" },
+            "categories": [
+                { "id": 1, "nome": "Eletrônico" }
+            ],
+            "imagens": [
+                { "id": 1, "dir": "../../../../assets/products/s22ultra_black/s22ultra-black-main.webp" },
+                { "id": 2, "dir": "../../../../assets/products/s22ultra_black/s22ultra_black-facing.webp" },
+                { "id": 3, "dir": "../../../../assets/products/s22ultra_black/s22ultra_black-onlyPhone.webp" },
+                { "id": 4, "dir": "../../../../assets/products/s22ultra_black/s22ultra_black-backwards.webp" },
+                { "id": 5, "dir": "../../../../assets/products/s22ultra_black/s22ultra-green.webp" }
+            ]
+        },
+        {
+            "id": 2,
+            "nome": "Lenovo IdeaPad Gaming 3i Chameleon Blue",
+            "descricao": "Equipado com Processador Intel® Core™ de 10ª Geração, placa gráfica dedicada NVIDIA® é ideal para gamers e usuários que precisam de alta performance. Com tela Full HD WVA Antirreflexo e um teclado desenvolvido para jogos, este notebook possui um sistema de refrigeração aprimorado e projetado para não esquentar. Esteja pronto para enfrentar qualquer batalha!",
+            "valor": 4311.99,
+            "marca": { "id": 2, "nome": "Lenovo" },
+            "categories": [
+                { "id": 1, "nome": "Eletrônico" }
+            ],
+            "imagens": [
+                { "id": 6, "dir": "../../../../assets/products/ideapadGaming3i/ideapad-gaming3i_main.webp" },
+                { "id": 7, "dir": "../../../../assets/products/ideapadGaming3i/ideapad-gaming3i_side.webp" },
+                { "id": 8, "dir": "../../../../assets/products/ideapadGaming3i/ideapad-gaming3i_up.webp" },
+                { "id": 9, "dir": "../../../../assets/products/ideapadGaming3i/ideapad-gaming3i_backwards.webp" },
+                { "id": 10, "dir": "../../../../assets/products/ideapadGaming3i/ideapad-gaming3i_frontside.webp" },
+                { "id": 11, "dir": "../../../../assets/products/ideapadGaming3i/ideapad-gaming3i_all.webp" }
+            ]
+        },
+        {
+            "id": 3,
+            "nome": "Samsung Lavadora WW4000 10Kg",
+            "descricao": "Se você procura praticidade, economia de tempo e energia e um design moderno para a sua casa a lavadora de roupas Samsung WW4000 é o eletrodoméstico ideal para você! Ela conta com porta frontal apresentando mais performance de lavagem, além de gastar menos água e energia. Tem 10kg de capacidade, cesto inox e motor Digital Inverter resultando em menos ruído e melhor eficiência energética. Ah! Vale ressaltar que possui água fria, 11 programas de lavagem e lavagem do tambor ECO que vão tornar a sua rotina super versátil. Com um design moderno, ela limpa com delicadeza sem danificar os tecidos e ainda combina com a sua casa! Atenção: Não é lava e seca.",
+            "valor": 2706.60,
+            "marca": { "id": 1, "nome": "Samsung" },
+            "categories": [
+                { "id": 2, "nome": "Eletrodoméstico" }
+            ],
+            "imagens": [
+                { "id": 12, "dir": "../../../../assets/products/lavadora/maquinalavar_main.webp" },
+                { "id": 13, "dir": "../../../../assets/products/lavadora/maquinalavar_frontside.webp" },
+                { "id": 14, "dir": "../../../../assets/products/lavadora/maquinalavar_open.webp" }
+            ]
+        },
+        {
+            "id": 4,
+            "nome": "Tênis Nike Downshifter 12 Masculino - Preto+Grafite",
+            "descricao": "Para garantir conforto e qualidade nas suas corridas diárias, aposte no Tênis Running Nike Downshifter 12! Indicado para quem está iniciando os treinos de running, caminhada e crossfit, o calçado desenvolvido em material leve e resistente, possui cabedal têxtil respirável, e bico mais fino, por isso compre um número acima do que costuma usar. O tênis Nike conta com faixa de ajuste no mediopé que, se usada em conjunto com sua amarração em cadarço, proporciona mais firmeza e suporte aos pés. Entressola em espuma macia e elevada, conferindo amortecimento e uma sensação suave em cada passada. Solado emborrachado para criar tração e dar aderência a calçadas, ruas e esteiras.",
+            "valor": 237.49,
+            "marca": { "id": 3, "nome": "Nike" },
+            "categories": [
+                { "id": 3, "nome": "Vestível" }
+            ],
+            "imagens": [
+                { "id": 15, "dir": "../../../../assets/products/tenisDownshifter/downshifter12_main.webp" },
+                { "id": 16, "dir": "../../../../assets/products/tenisDownshifter/downshifter12_side.webp" },
+                { "id": 17, "dir": "../../../../assets/products/tenisDownshifter/downshifter12_backwards.webp" },
+                { "id": 18, "dir": "../../../../assets/products/tenisDownshifter/downshifter12_up.webp" },
+                { "id": 19, "dir": "../../../../assets/products/tenisDownshifter/downshifter12_down.webp" }
+            ]
+        },
+        {
+            "id": 5,
+            "nome": "Apple Watch SE",
+            "descricao": "A caixa de alumínio é leve e feita com uma liga de alumínio aeroespacial 100% reciclado. A pulseira esportiva é feita de fluorelastômero resistente e surpreendentemente macio e vem com um fecho inovador, em forma de pino. Requer iPhone 8 ou posterior com iOS 16 ou posterior. Atenção: não vem com adaptador de energia.",
+            "valor": 3.799,
+            "marca": { "id": 4, "nome": "Apple" },
+            "categories": [
+                { "id": 1, "nome": "Eletrônico" },
+                { "id": 3, "nome": "Vestível" }
+            ],
+            "imagens": [
+                { "id": 20, "dir": "../../../../assets/products/applewatch/applewatch_main.jpg" },
+                { "id": 21, "dir": "../../../../assets/products/applewatch/applewatch_frontside.jpg" }
+            ]
+        }
+    ]
+}
