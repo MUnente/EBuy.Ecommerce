@@ -80,6 +80,152 @@
                 { "id": 20, "dir": "http://localhost:3000/assets/images/products/applewatch/applewatch_main.jpg" },
                 { "id": 21, "dir": "http://localhost:3000/assets/images/products/applewatch/applewatch_frontside.jpg" }
             ]
+        },
+        {
+            "id": 6,
+            "nome": "Camisa Nike Brasil I 2022/23 Torcedor Pro Masculina",
+            "descricao": "Assim como outras camisas da nossa coleção Stadium, esse modelo combina detalhes de design de réplica com tecido que absorve o suor para oferecer um visual preparado para o jogo e inspirado no seu time favorito.",
+            "valor": 349.99,
+            "marca": { "id": 3, "nome": "Nike" },
+            "categories": [
+                { "id": 3, "nome": "Vestível" }
+            ],
+            "imagens": [
+                { "id": 22, "dir": "http://localhost:3000/assets/images/products/camisabrasil-pro1/camisabrasil-pro1_main.webp" },
+                { "id": 23, "dir": "http://localhost:3000/assets/images/products/camisabrasil-pro1/camisabrasil-pro1_backwards.webp" },
+                { "id": 24, "dir": "http://localhost:3000/assets/images/products/camisabrasil-pro1/camisabrasil-pro1_brasao.jpg" }
+            ]
+        },
+        {
+            "id": 7,
+            "nome": "SSD Kingston SATA A400 960GB",
+            "descricao": "A unidade de estado sólido A400 da Kingston aumenta drasticamente a resposta do seu computador com tempos incríveis de inicialização, carregamento e transferência, comparados a discos rígidos mecânicos. Reforçado com uma controladora de última geração para velocidades de leitura e gravação de até 500MB/s e 450MB/s1, este SSD é 10x mais rápido do que um disco rígido tradicional para melhor desempenho, resposta ultra-rápida em multitarefas e um computador mais rápido de modo geral.",
+            "valor": 429.99,
+            "marca": { "id": 5, "nome": "Kingston" },
+            "categories": [
+                { "id": 4, "nome": "Hardware" }
+            ],
+            "imagens": [
+                { "id": 25, "dir": "http://localhost:3000/assets/images/products/ssdking960/ssd-960gb_main.webp" },
+                { "id": 26, "dir": "http://localhost:3000/assets/images/products/ssdking960/ssd-960gb_box.jpg" }
+            ]
+        },
+        {
+            "id": 8,
+            "nome": "Smart TV Samsung Tizen HD T4300 32\" 2020, HDR",
+            "descricao": "Sua Smart TV com conteúdos ainda mais fáceis de acessar. Acesse suas músicas, filmes, notícias, jogos e redes sociais tudo em uma única tela, com o sistema operacional TIZEN.",
+            "valor": 1253.05,
+            "marca": { "id": 1, "nome": "Samsung" },
+            "categories": [
+                { "id": 2, "nome": "Eletrodoméstico" }
+            ],
+            "imagens": [
+                { "id": 12, "dir": "http://localhost:3000/assets/images/products/smarttv32pol/smarttv-32pol_main.webp" }
+            ]
+        }
+    ],
+    "orders": [
+        {
+            "productsCart": [
+                {
+                    "product": {
+                        "id": 8,
+                        "nome": "Smart TV Samsung Tizen HD T4300 32\" 2020, HDR",
+                        "valor": 1253.05,
+                        "marca": { "id": 1, "nome": "Samsung" }
+                    },
+                    "quantity": 1
+                },
+                {
+                    "product": {
+                        "id": 4,
+                        "nome": "Tênis Nike Downshifter 12 Masculino - Preto+Grafite",
+                        "valor": 237.49,
+                        "marca": { "id": 3, "nome": "Nike" }
+                    },
+                    "quantity": 1
+                }
+            ],
+            "totalPrice": 1490.54,
+            "paymentMethod": {
+                "id": 1,
+                "name": "Boleto"
+            },
+            "address": "Rua Francisco França, 99, Jd. Leopoldo, 14593-059, Osasco-SP",
+            "orderStatus": {
+                "id": 1,
+                "name": "Pendente"
+            },
+            "IdCliente": 1,
+            "estimatedDate": "2023-03-05"
+        },
+        {
+            "productsCart": [
+                {
+                    "product": {
+                        "id": 7,
+                        "nome": "SSD Kingston SATA A400 960GB",
+                        "valor": 429.99,
+                        "marca": { "id": 5, "nome": "Kingston" }
+                    },
+                    "quantity": 1
+                }
+            ],
+            "totalPrice": 429.99,
+            "paymentMethod": { 
+                "id": 3,
+                "name": "Pix"
+            },
+            "address": "Rua Oswaldo Cruz, 157, Centro, 13360-041, Capivari-SP",
+            "orderStatus": {
+                "id": 2,
+                "name": "Entregue"
+            },
+            "IdCliente": 1,
+            "estimatedDate": "2022-12-17"
+        },
+        {
+            "productsCart": [
+                {
+                    "product": {
+                        "id": 5,
+                        "nome": "Apple Watch SE",
+                        "valor": 3799,
+                        "marca": { "id": 4, "nome": "Apple" }
+                    },
+                    "quantity": 1
+                },
+                {
+                    "product": {
+                        "id": 4,
+                        "nome": "Tênis Nike Downshifter 12 Masculino - Preto+Grafite",
+                        "valor": 237.49,
+                        "marca": { "id": 3, "nome": "Nike" }
+                    },
+                    "quantity": 4
+                },
+                {
+                    "product": {
+                        "id": 6,
+                        "nome": "Camisa Nike Brasil I 2022/23 Torcedor Pro Masculina",
+                        "valor": 349.99,
+                        "marca": { "id": 3, "nome": "Nike" }
+                    },
+                    "quantity": 4
+                }
+            ],
+            "totalPrice": 6148.92,
+            "paymentMethod": {
+                "id": 2,
+                "name": "Cartão de Crédito"
+            },
+            "address": "Rua Oswaldo Cruz, 157, Centro, 13360-041, Capivari-SP",
+            "orderStatus": {
+                "id": 2,
+                "name": "Entregue"
+            },
+            "IdCliente": 1,
+            "estimatedDate": "2022-10-11"
         }
     ]
 }

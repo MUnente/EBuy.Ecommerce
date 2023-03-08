@@ -1,13 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Order } from 'src/app/models/order';
+import { OrderService } from 'src/app/services/order.service';
 
 @Component({
   selector: 'app-orders',
   templateUrl: './my-orders.component.html',
-  styles: [
-    `
-      .card + .card { margin-top: 40px }
-      .card-header-title i { font-size: 16px; padding-top: 3px; margin-right: 10px; }
-    `
-  ]
 })
-export class MyOrdersComponent { }
+export class MyOrdersComponent implements OnInit {
+  constructor (private orderService: OrderService) { }
+
+  public orders!: Order[];
+
+  ngOnInit(): void {
+    const cliente = { id: 1 };
+
+    this.orderService.getOrders(cliente.id).subscribe({
+      next: data => this.orders = data,
+      error: error => console.error(error)
+    });
+  }
+}

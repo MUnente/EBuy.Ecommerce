@@ -1,0 +1,23 @@
+<div class="card" *ngFor="let order of orders">
+    <div class="card-header d-flex justify-content-between">
+        <div class="card-header-title d-flex align-items-center">
+            <i [ngClass]="getPaymentMethodIconClass(order.paymentMethod.id)" [title]="order.paymentMethod.name"></i>
+            <h3 class="fs-5 mb-0">{{ order.estimatedDate | date :'longDate' :'' :'pt' }}</h3>
+        </div>
+        <h3 class="fs-5 mb-0">Total: {{ order.totalPrice | currency :'BRL' :'symbol' :'1.2-2' :'pt' }}</h3>
+    </div>
+    <div class="card-body">
+        <div *ngFor="let productCart of order.productsCart; index as i">
+            <h5 class="card-title">{{ productCart.product.nome }}</h5>
+            <div class="d-flex justify-content-between">
+                <p class="card-text">Quantidade: {{ productCart.quantity }}</p>
+                <p>Preço un.: {{ productCart.product.valor | currency :'BRL' :'symbol' :'1.2-2' :'pt'}}</p>
+            </div>
+            <hr *ngIf="i+1 < order.productsCart.length" />
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-between">
+        <p class="mb-0">Endereço: {{ order.address }}</p>
+        <p class="mb-0">Status: {{ order.orderStatus.name }}</p>
+    </div>
+</div>
