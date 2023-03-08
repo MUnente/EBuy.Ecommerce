@@ -13,9 +13,9 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarResponsive">
-                <form class="d-flex col-lg-6 col-md-12 col-sm-12 my-0 mx-auto" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Busque um produto" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Buscar</button>
+                <form class="d-flex col-lg-6 col-md-12 col-sm-12 my-0 mx-auto ng" [formGroup]="formSearch" (ngSubmit)="search()" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Busque um produto" formControlName="query" aria-label="Search">
+                    <button class="btn btn-outline-light">Buscar</button>
                 </form>
     
                 <ul class="navbar-nav">

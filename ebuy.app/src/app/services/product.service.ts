@@ -9,8 +9,8 @@ export class ProductService {
 
   protected UrlService: string = 'http://localhost:3000/';
 
-  getProducts(): Observable<Product[]> {
-    return this.http.get<Product[]>(this.UrlService + 'products');
+  getProducts(query?: string | null): Observable<Product[]> {
+    return query ? this.http.get<Product[]>(this.UrlService + 'products?q=' + query) : this.http.get<Product[]>(this.UrlService + 'products');
   }
 
   getProduct(id: string): Observable<Product> {
