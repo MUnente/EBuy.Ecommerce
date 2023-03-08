@@ -2,32 +2,82 @@
 
 <div class="container w-50 mt-5">
     <div class="tab-content">
-        <form>
+        <form novalidate [formGroup]="registerForm" (ngSubmit)="registerUser()">
             <h2 class="text-center">Faça o seu cadastro:</h2>
 
             <div class="form-outline mb-4">
                 <label class="form-label" for="registerName">Nome completo</label>
-                <input type="text" id="registerName" class="form-control" />
+                <input 
+                    type="text" 
+                    id="registerName" 
+                    class="form-control" 
+                    formControlName="name" 
+                    [ngClass]="{ 'is-invalid': isValidField('name') }" 
+                />
+                <span class="text-danger" *ngIf="isFieldFilled('name')">
+                    <p>Preencha o campo nome</p>
+                </span>
             </div>
 
             <div class="form-outline mb-4">
                 <label class="form-label" for="registerEmail">E-mail</label>
-                <input type="email" id="registerEmail" class="form-control" />
+                <input 
+                    type="email" 
+                    id="registerEmail" 
+                    class="form-control" 
+                    formControlName="email" 
+                    [ngClass]="{ 'is-invalid': isValidField('email') }" 
+                />
+                <span class="text-danger" *ngIf="isFieldFilled('email')">
+                    <p>Preencha o campo e-mail</p>
+                </span>
+                <span class="text-danger" *ngIf="isValidEmailField('email')">
+                    <p>E-mail inválido</p>
+                </span>
             </div>
 
             <div class="form-outline mb-4">
                 <label class="form-label" for="registerPassword">Senha</label>
-                <input type="password" id="registerPassword" class="form-control" />
+                <input 
+                    type="password" 
+                    id="registerPassword" 
+                    class="form-control" 
+                    formControlName="password" 
+                    [ngClass]="{ 'is-invalid': isValidField('password') }"
+                />
+                <span class="text-danger" *ngIf="isFieldFilled('password')">
+                    <p>Preencha o campo senha</p>
+                </span>
+                <span class="text-danger" *ngIf="isPasswordValid('password')">
+                    <p>A senha precisa ter entre 6 a 15 caracteres</p>
+                </span>
             </div>
 
             <div class="form-outline mb-4">
                 <label class="form-label" for="registerRepeatPassword">Confirme sua senha</label>
-                <input type="password" id="registerRepeatPassword" class="form-control" />
+                <input 
+                    type="password" 
+                    id="registerRepeatPassword" 
+                    class="form-control" 
+                    formControlName="confirmPassword" 
+                    [ngClass]="{ 'is-invalid': isValidField('confirmPassword') }"
+                />
+                <span class="text-danger" *ngIf="isFieldFilled('confirmPassword')">
+                    <p>Preencha o campo de confirmar senha</p>
+                </span>
+                <span class="text-danger" *ngIf="isConfirmPasswordValid('confirmPassword')">
+                    <p>As senhas não são iguais</p>
+                </span>
             </div>
 
             <div class="form-check d-flex justify-content-start mb-4">
-                <input class="form-check-input me-2" type="checkbox" id="registerCheck"
-                    aria-describedby="registerCheckHelpText" />
+                <input 
+                    class="form-check-input me-2" 
+                    type="checkbox" 
+                    id="registerCheck" 
+                    aria-describedby="registerCheckHelpText" 
+                    formControlName="acceptTerms" 
+                />
                 <label class="form-check-label" for="registerCheck">
                     <p class="d-inline text-decoration-underline text-primary" data-bs-toggle="modal"
                         data-bs-target="#modalComponent" style="cursor: pointer;">Eu li e aceito os termos de uso</p>
@@ -35,7 +85,7 @@
             </div>
 
             <div class="d-flex justify-content-center">
-                <button type="submit" class="btn btn-primary btn-block mb-3">Cadastrar</button>
+                <button type="submit" class="btn btn-primary btn-block mb-3" [disabled]="registerForm.invalid">Cadastrar</button>
             </div>
 
             <div class="text-center">

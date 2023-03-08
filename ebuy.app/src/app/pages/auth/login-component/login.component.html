@@ -2,21 +2,35 @@
 
 <div class="container w-50 mt-5">
   <div class="tab-content">
-    <form>
+    <form novalidate [formGroup]="loginForm" (ngSubmit)="login()">
       <h2 class="text-center">Faça o seu login:</h2>
 
       <div class="form-outline mb-4">
         <label class="form-label" for="loginName">E-mail</label>
-        <input type="email" id="loginName" class="form-control" />
+        <input type="email" id="loginName" class="form-control" formControlName="email" [ngClass]="{ 'is-invalid': isValidField('email') }" />
+
+        <span class="text-danger" *ngIf="isFieldFilled('email')">
+          <p>Preencha o campo e-mail</p>
+        </span>
+        <span class="text-danger" *ngIf="isValidEmailField('email')">
+            <p>E-mail inválido</p>
+        </span>
       </div>
 
       <div class="form-outline mb-4">
         <label class="form-label" for="loginPassword">Senha</label>
-        <input type="password" id="loginPassword" class="form-control" />
+        <input type="password" id="loginPassword" class="form-control" formControlName="password" [ngClass]="{ 'is-invalid': isValidField('password') }" />
+
+        <span class="text-danger" *ngIf="isFieldFilled('password')">
+          <p>Preencha o campo senha</p>
+        </span>
+        <span class="text-danger" *ngIf="isPasswordValid('password')">
+            <p>A senha precisa ter entre 6 a 15 caracteres</p>
+        </span>
       </div>
 
       <div class="d-flex justify-content-center">
-        <button type="submit" class="btn btn-primary btn-block mb-4 w-25">Entrar</button>
+        <button type="submit" class="btn btn-primary btn-block mb-4 w-25" [disabled]="loginForm.invalid">Entrar</button>
       </div>
 
       <div class="text-center">
