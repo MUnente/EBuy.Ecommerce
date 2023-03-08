@@ -1,13 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { CustomValidators } from '@narik/custom-validators';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-auth',
   templateUrl: './login.component.html',
 })
 export class LoginComponent implements OnInit {
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder, 
+    private router: Router,
+    private authService: AuthService
+  ) { }
 
   loginForm!: FormGroup;
 
@@ -37,7 +43,8 @@ export class LoginComponent implements OnInit {
 
   login(): void {
     if (this.loginForm.dirty && this.loginForm.valid) {
-      alert('logged');
+      this.authService.login();
+      this.router.navigate(['/home']);
     }
     else {
       alert('Não foi possível submeter o formulário. Tente novamente em breve.')

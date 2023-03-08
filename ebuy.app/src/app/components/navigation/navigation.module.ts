@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { TopMenuComponent } from './top-menu-component/top-menu.component';
 import { FooterComponent } from './footer-component/footer.component';
+import { AuthService } from 'src/app/services/auth.service';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,9 @@ import { FooterComponent } from './footer-component/footer.component';
   exports: [
     TopMenuComponent,
     FooterComponent
+  ],
+  providers: [
+    AuthService
   ]
 })
 export class NavigationModule { }

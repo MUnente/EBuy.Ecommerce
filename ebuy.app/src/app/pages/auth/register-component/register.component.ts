@@ -1,13 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { CustomValidators } from '@narik/custom-validators';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register-component',
   templateUrl: './register.component.html',
 })
 export class RegisterComponent implements OnInit {
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private authService: AuthService
+  ) { }
 
   registerForm!: FormGroup;
 
@@ -37,7 +43,8 @@ export class RegisterComponent implements OnInit {
 
   registerUser(): void {
     if (this.registerForm.dirty && this.registerForm.valid) {
-      alert('registered');
+      this.authService.login();
+      this.router.navigate(['/home']);
     }
     else {
       alert('Não foi possível submeter o formulário. Tente novamente em breve.')

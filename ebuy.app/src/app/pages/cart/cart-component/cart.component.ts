@@ -8,7 +8,9 @@ import { Product } from 'src/app/models/product';
   templateUrl: './cart.component.html',
 })
 export class CartComponent implements OnInit {
-  constructor (private cartService: CartService) { }
+  constructor (
+    private cartService: CartService
+  ) { }
 
   public totalPrice: number = 0;
   public products!: ProductCart[];
@@ -44,7 +46,6 @@ export class CartComponent implements OnInit {
 
   updateQuantity(event: any): void {
     this.cartService.updateCart(parseInt(event.currentTarget.getAttribute('productcartindex')), parseInt(event.currentTarget.value));
-
     this.loadProductListAndTotalPrice();
   }
 

@@ -9,6 +9,8 @@ import { TermsModalModule } from 'src/app/components/terms-modal/terms-modal.mod
 import { LoginComponent } from './login-component/login.component';
 import { RegisterComponent } from './register-component/register.component';
 
+import { AuthService } from 'src/app/services/auth.service';
+
 @NgModule({
   declarations: [
     LoginComponent,
@@ -21,6 +23,9 @@ import { RegisterComponent } from './register-component/register.component';
     AuthRoutingModule,
     TermsModalModule,
     SharedModule
+  ],
+  providers: [
+    AuthService
   ]
 })
 export class AuthModule { }

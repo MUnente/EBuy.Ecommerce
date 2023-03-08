@@ -8,7 +8,7 @@
         <div class="content d-flex flex-column justify-content-between">
             <div class="product-info">
                 <h3 class="fs-4">{{ product.nome }}</h3>
-                <p class="brand-name">Fabricante: <a href="#">{{ product.marca.nome }}</a></p>
+                <p class="brand-name">Fabricante: <a [routerLink]="['/products']" [queryParams]="{ 'marca.id': product.marca.id }">{{ product.marca.nome }}</a></p>
                 <p class="product-description">{{ product.descricao }}</p>
             </div>
 
