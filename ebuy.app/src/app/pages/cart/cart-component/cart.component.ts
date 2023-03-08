@@ -15,7 +15,10 @@ export class CartComponent implements OnInit {
 
   loadProductListAndTotalPrice(): void {
     this.products = this.cartService.listCart();
-    this.totalPrice = this.getTotalPrice();
+    if (this.products.length)
+      this.totalPrice = this.getTotalPrice();
+    else 
+      this.totalPrice = 0;
   }
 
   getProductCategories(product: Product): string {
@@ -23,7 +26,7 @@ export class CartComponent implements OnInit {
   }
 
   getTotalPrice(): number {
-    return this.products.map(item => item.product.valor * item.quantity).reduce((accumulator, index) => accumulator + index);
+    return this.products.map(item => (item.product.valor * item.quantity)).reduce((accumulator, index) => accumulator + index);
   }
 
   deleteProduct(event: any): void {
