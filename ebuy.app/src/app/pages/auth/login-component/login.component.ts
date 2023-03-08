@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit {
 
   login(): void {
     if (this.loginForm.dirty && this.loginForm.valid) {
-      alert('nice bro');
+      alert('logged');
     }
     else {
       alert('Não foi possível submeter o formulário. Tente novamente em breve.')

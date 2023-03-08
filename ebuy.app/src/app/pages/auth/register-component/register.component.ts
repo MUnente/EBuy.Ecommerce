@@ -37,7 +37,7 @@ export class RegisterComponent implements OnInit {
 
   registerUser(): void {
     if (this.registerForm.dirty && this.registerForm.valid) {
-      alert('nice bro');
+      alert('registered');
     }
     else {
       alert('Não foi possível submeter o formulário. Tente novamente em breve.')
