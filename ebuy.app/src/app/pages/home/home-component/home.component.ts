@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
   constructor(private brandService: BrandService) { }
 
   ngOnInit(): void {
-    this.brandService.getOrders().subscribe({
+    this.brandService.getBrands().subscribe({
       next: data => this.brands = data,
       error: error => console.error(error)
     });

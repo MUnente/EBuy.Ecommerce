@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Order } from 'src/app/models/order';
 import { OrderService } from 'src/app/services/order.api.service';
+import { param } from 'src/app/models/param';
 
 @Component({
   selector: 'app-orders',
@@ -12,9 +13,9 @@ export class MyOrdersComponent implements OnInit {
   public orders!: Order[];
 
   ngOnInit(): void {
-    const cliente = { id: 1 };
+    const params: param[] = [{ key: 'IdCliente', value: 1 }];
 
-    this.orderService.getOrders(cliente.id).subscribe({
+    this.orderService.getOrders(params).subscribe({
       next: data => this.orders = data,
       error: error => console.error(error)
     });

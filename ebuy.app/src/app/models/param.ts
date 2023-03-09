@@ -1,4 +1,4 @@
 export interface param {
     key: string;
-    value: string
+    value: string | number
   };
