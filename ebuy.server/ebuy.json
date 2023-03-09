@@ -414,7 +414,7 @@
         {
             "id": 2,
             "nome": "Lenovo",
-            "image_dir": "http://localhost:3000/assets/images/brands/lenovo_logo.webp"
+            "image_dir": "http://localhost:3000/assets/images/brands/lenovo_logo.jpg"
         },
         {
             "id": 3,
