@@ -13,7 +13,6 @@ export class ProductsComponent implements OnInit {
   public products!: Product[];
 
   ngOnInit(): void {
-    debugger;
     let params: param[] = [];
 
     this.activatedRoute.snapshot.queryParamMap.keys.forEach(key => {

@@ -8,23 +8,24 @@ import { param } from '../models/param';
 @Injectable()
 export class ProductService {
   private httpBuilder: HttpBuilder;
-
-  constructor(private http: HttpClient) {
-    this.httpBuilder = new HttpBuilder('/products');
-  }
-
   protected UrlService: string = 'http://localhost:3000';
 
-  getProducts(params: param[]): Observable<Product[]> {
+  constructor(private http: HttpClient) {
+    this.httpBuilder = new HttpBuilder(this.UrlService, '/products');
+  }
+
+  public getProducts(params: param[]): Observable<Product[]> {
     this.httpBuilder.appendParams(params);
-    return this.http.get<Product[]>(this.UrlService + this.httpBuilder.buildRoute());
+    const urlRequest = this.httpBuilder.buildRoute();
+    this.httpBuilder.destroy();
+
+    return this.http.get<Product[]>(urlRequest);
   }
 
-  getProductsByBrand(query: string): Observable<Product[]> {
-    return this.http.get<Product[]>(this.UrlService + 'products?q=' + query);
-  }
+  public getProduct(id: string): Observable<Product> {
+    const urlRequest = this.httpBuilder.buildRoute() + '/' + id;
+    this.httpBuilder.destroy();
 
-  getProduct(id: string): Observable<Product> {
-    return this.http.get<Product>(this.UrlService + this.httpBuilder.buildRoute() + '/' + id);
+    return this.http.get<Product>(urlRequest);
   }
 }

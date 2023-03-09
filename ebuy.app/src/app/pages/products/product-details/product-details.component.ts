@@ -22,7 +22,7 @@ export class ProductDetailsComponent implements OnInit {
   private loadProductDetails(): void {
     this.activatedRoute.params.subscribe(params => {
       this.productService.getProduct(params['id'].toString()).subscribe({
-        next: data => {this.product = data; console.log(this.product.imagens)},
+        next: data => this.product = data,
         error: error => console.error(error)
       });
     });

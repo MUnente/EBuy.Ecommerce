@@ -3,33 +3,41 @@ import { param } from "../models/param";
 
 interface IHttpBuilder {
     setRootRoute(rootRoute: string): void;
+    setUrl(url: string): void;
     appendParam(paramKey: string, value: any): this;
     appendParams(param: param[]): this;
     buildParams(): HttpParams;
-    buildRoute(): string;
+    buildRoute(url?: string, rootRoute?: string): string;
+    destroy(): void;
 }
 
 export class HttpBuilder implements IHttpBuilder {
-    private rootRoute?: string;
+    private url: string;
+    private rootRoute: string;
     private params: HttpParams;
 
-    constructor (rootRoute?: string) {
-        this.rootRoute = rootRoute;
+    constructor (url?: string, rootRoute?: string) {
+        this.url = url ?? '';
+        this.rootRoute = rootRoute ?? '';
         this.params = new HttpParams();
     }
 
-    setRootRoute(rootRoute: string): void {
+    public setRootRoute(rootRoute: string): void {
         this.rootRoute = rootRoute;
     }
 
-    appendParam(paramKey: string, value: any): this {
+    public setUrl(url: string): void {
+        this.url = url;
+    }
+
+    public appendParam(paramKey: string, value: any): this {
         if (value) {
             this.params = this.params.append(paramKey, value)
         }
         return this;
     }
 
-    appendParams(params: param[]): this {
+    public appendParams(params: param[]): this {
         if (params) {
             params.forEach(param => {
                 this.appendParam(param.key, param.value);
@@ -38,12 +46,18 @@ export class HttpBuilder implements IHttpBuilder {
         return this;
     }
 
-    buildParams(): HttpParams {
+    public buildParams(): HttpParams {
         return this.params;
     }
 
-    buildRoute(rootRoute?: string): string {
+    public buildRoute(url?: string, rootRoute?: string): string {
         if (rootRoute) this.rootRoute = rootRoute;
-        return this.params.keys().length ? this.rootRoute + '?' + this.params.toString() : this.rootRoute!;
+        if (url) this.url = url;
+
+        return this.params.keys().length ? (this.url + this.rootRoute + '?' + this.params.toString()) : (this.url + this.rootRoute ?? '');
+    }
+
+    public destroy(): void {
+        this.params = new HttpParams();
     }
 }
