@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
-import { ProductService } from 'src/app/services/product.service';
+import { ProductService } from 'src/app/services/product.api.service';
 
 @Component({
   selector: 'app-product-details',
@@ -22,7 +22,7 @@ export class ProductDetailsComponent implements OnInit {
   private loadProductDetails(): void {
     this.activatedRoute.params.subscribe(params => {
       this.productService.getProduct(params['id'].toString()).subscribe({
-        next: data => this.product = data,
+        next: data => {this.product = data; console.log(this.product.imagens)},
         error: error => console.error(error)
       });
     });

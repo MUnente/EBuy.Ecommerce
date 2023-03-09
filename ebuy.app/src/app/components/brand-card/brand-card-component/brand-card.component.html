@@ -1,0 +1,3 @@
+<a class="eb-brand-card" *ngFor="let item of brands" [title]="item.nome" [routerLink]="['/products']" [queryParams]="{ 'marca.id': item.id }">
+    <img class="eb-brand-img" [src]="item.image_dir" [alt]="'Logo da ' + item.nome">
+</a>

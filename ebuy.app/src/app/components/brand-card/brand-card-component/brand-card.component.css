@@ -1,0 +1,16 @@
+.eb-brand-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    margin-right: 32px;
+    border: 1px solid rgba(0, 39, 78, 0.4);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.eb-brand-img {
+    width: 100px;
+    height: 100px;
+}

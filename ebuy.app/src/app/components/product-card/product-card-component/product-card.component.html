@@ -5,7 +5,7 @@
             <p class="product-name fw-bold">{{ product.nome }}</p>
             <p class="mt-auto product-price fs-5 fw-bold text-success">{{ product.valor | currency:'BRL':'symbol':'1.2-2':'pt' }}</p>
         </div>
-        <div class="card-footer">
+        <div class="card-footer mb-2">
             <a [routerLink]="['details/' + product.id]" class="btn btn-primary">Detalhes</a>
         </div>
     </div>

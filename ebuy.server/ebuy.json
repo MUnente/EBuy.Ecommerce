@@ -5,15 +5,33 @@
             "nome": "Samsung Galaxy S22 Ultra Black",
             "descricao": "O Smartphone possuí uma capacidade de armazenamento de 256GB, Dual Chip com tecnologia 5G, processador Octa-Core Snapdragon 8 Gen 1 uma memória RAM de 12GB, permitindo o dispositivo funcionar da melhor maneira possível.",
             "valor": 4299.99,
-            "marca": { "id": 1, "nome": "Samsung" },
+            "marca": {
+                "id": 1,
+                "nome": "Samsung"
+            },
             "categories": [
-                { "id": 1, "nome": "Eletrônico" }
+                {
+                    "id": 1,
+                    "nome": "Eletrônico"
+                }
             ],
             "imagens": [
-                { "id": 1, "dir": "http://localhost:3000/assets/images/products/s22ultra_black/s22ultra-black-main.webp" },
-                { "id": 2, "dir": "http://localhost:3000/assets/images/products/s22ultra_black/s22ultra_black-facing.webp" },
-                { "id": 3, "dir": "http://localhost:3000/assets/images/products/s22ultra_black/s22ultra_black-onlyPhone.webp" },
-                { "id": 4, "dir": "http://localhost:3000/assets/images/products/s22ultra_black/s22ultra_black-backwards.webp" }
+                {
+                    "id": 1,
+                    "dir": "http://localhost:3000/assets/images/products/s22ultra_black/s22ultra-black-main.webp"
+                },
+                {
+                    "id": 2,
+                    "dir": "http://localhost:3000/assets/images/products/s22ultra_black/s22ultra_black-facing.webp"
+                },
+                {
+                    "id": 3,
+                    "dir": "http://localhost:3000/assets/images/products/s22ultra_black/s22ultra_black-onlyPhone.webp"
+                },
+                {
+                    "id": 4,
+                    "dir": "http://localhost:3000/assets/images/products/s22ultra_black/s22ultra_black-backwards.webp"
+                }
             ]
         },
         {
@@ -21,17 +39,41 @@
             "nome": "Lenovo IdeaPad Gaming 3i Chameleon Blue",
             "descricao": "Equipado com Processador Intel® Core™ de 10ª Geração, placa gráfica dedicada NVIDIA® é ideal para gamers e usuários que precisam de alta performance. Com tela Full HD WVA Antirreflexo e um teclado desenvolvido para jogos, este notebook possui um sistema de refrigeração aprimorado e projetado para não esquentar. Esteja pronto para enfrentar qualquer batalha!",
             "valor": 4311.99,
-            "marca": { "id": 2, "nome": "Lenovo" },
+            "marca": {
+                "id": 2,
+                "nome": "Lenovo"
+            },
             "categories": [
-                { "id": 1, "nome": "Eletrônico" }
+                {
+                    "id": 1,
+                    "nome": "Eletrônico"
+                }
             ],
             "imagens": [
-                { "id": 6, "dir": "http://localhost:3000/assets/images/products/ideapadGaming3i/ideapad-gaming3i_main.webp" },
-                { "id": 7, "dir": "http://localhost:3000/assets/images/products/ideapadGaming3i/ideapad-gaming3i_side.webp" },
-                { "id": 8, "dir": "http://localhost:3000/assets/images/products/ideapadGaming3i/ideapad-gaming3i_up.webp" },
-                { "id": 9, "dir": "http://localhost:3000/assets/images/products/ideapadGaming3i/ideapad-gaming3i_backwards.webp" },
-                { "id": 10, "dir": "http://localhost:3000/assets/images/products/ideapadGaming3i/ideapad-gaming3i_frontside.webp" },
-                { "id": 11, "dir": "http://localhost:3000/assets/images/products/ideapadGaming3i/ideapad-gaming3i_all.webp" }
+                {
+                    "id": 6,
+                    "dir": "http://localhost:3000/assets/images/products/ideapadGaming3i/ideapad-gaming3i_main.webp"
+                },
+                {
+                    "id": 7,
+                    "dir": "http://localhost:3000/assets/images/products/ideapadGaming3i/ideapad-gaming3i_side.webp"
+                },
+                {
+                    "id": 8,
+                    "dir": "http://localhost:3000/assets/images/products/ideapadGaming3i/ideapad-gaming3i_up.webp"
+                },
+                {
+                    "id": 9,
+                    "dir": "http://localhost:3000/assets/images/products/ideapadGaming3i/ideapad-gaming3i_backwards.webp"
+                },
+                {
+                    "id": 10,
+                    "dir": "http://localhost:3000/assets/images/products/ideapadGaming3i/ideapad-gaming3i_frontside.webp"
+                },
+                {
+                    "id": 11,
+                    "dir": "http://localhost:3000/assets/images/products/ideapadGaming3i/ideapad-gaming3i_all.webp"
+                }
             ]
         },
         {
@@ -39,14 +81,29 @@
             "nome": "Samsung Lavadora WW4000 10Kg",
             "descricao": "Se você procura praticidade, economia de tempo e energia e um design moderno para a sua casa a lavadora de roupas Samsung WW4000 é o eletrodoméstico ideal para você! Ela conta com porta frontal apresentando mais performance de lavagem, além de gastar menos água e energia. Tem 10kg de capacidade, cesto inox e motor Digital Inverter resultando em menos ruído e melhor eficiência energética. Ah! Vale ressaltar que possui água fria, 11 programas de lavagem e lavagem do tambor ECO que vão tornar a sua rotina super versátil. Com um design moderno, ela limpa com delicadeza sem danificar os tecidos e ainda combina com a sua casa! Atenção: Não é lava e seca.",
             "valor": 2706.60,
-            "marca": { "id": 1, "nome": "Samsung" },
+            "marca": {
+                "id": 1,
+                "nome": "Samsung"
+            },
             "categories": [
-                { "id": 2, "nome": "Eletrodoméstico" }
+                {
+                    "id": 2,
+                    "nome": "Eletrodoméstico"
+                }
             ],
             "imagens": [
-                { "id": 12, "dir": "http://localhost:3000/assets/images/products/lavadora/maquinalavar_main.webp" },
-                { "id": 13, "dir": "http://localhost:3000/assets/images/products/lavadora/maquinalavar_frontside.webp" },
-                { "id": 14, "dir": "http://localhost:3000/assets/images/products/lavadora/maquinalavar_open.webp" }
+                {
+                    "id": 12,
+                    "dir": "http://localhost:3000/assets/images/products/lavadora/maquinalavar_main.webp"
+                },
+                {
+                    "id": 13,
+                    "dir": "http://localhost:3000/assets/images/products/lavadora/maquinalavar_frontside.webp"
+                },
+                {
+                    "id": 14,
+                    "dir": "http://localhost:3000/assets/images/products/lavadora/maquinalavar_open.webp"
+                }
             ]
         },
         {
@@ -54,16 +111,37 @@
             "nome": "Tênis Nike Downshifter 12 Masculino - Preto+Grafite",
             "descricao": "Para garantir conforto e qualidade nas suas corridas diárias, aposte no Tênis Running Nike Downshifter 12! Indicado para quem está iniciando os treinos de running, caminhada e crossfit, o calçado desenvolvido em material leve e resistente, possui cabedal têxtil respirável, e bico mais fino, por isso compre um número acima do que costuma usar. O tênis Nike conta com faixa de ajuste no mediopé que, se usada em conjunto com sua amarração em cadarço, proporciona mais firmeza e suporte aos pés. Entressola em espuma macia e elevada, conferindo amortecimento e uma sensação suave em cada passada. Solado emborrachado para criar tração e dar aderência a calçadas, ruas e esteiras.",
             "valor": 237.49,
-            "marca": { "id": 3, "nome": "Nike" },
+            "marca": {
+                "id": 3,
+                "nome": "Nike"
+            },
             "categories": [
-                { "id": 3, "nome": "Vestível" }
+                {
+                    "id": 3,
+                    "nome": "Vestível"
+                }
             ],
             "imagens": [
-                { "id": 15, "dir": "http://localhost:3000/assets/images/products/tenisDownshifter/downshifter12_main.webp" },
-                { "id": 16, "dir": "http://localhost:3000/assets/images/products/tenisDownshifter/downshifter12_side.webp" },
-                { "id": 17, "dir": "http://localhost:3000/assets/images/products/tenisDownshifter/downshifter12_backwards.webp" },
-                { "id": 18, "dir": "http://localhost:3000/assets/images/products/tenisDownshifter/downshifter12_up.webp" },
-                { "id": 19, "dir": "http://localhost:3000/assets/images/products/tenisDownshifter/downshifter12_down.webp" }
+                {
+                    "id": 15,
+                    "dir": "http://localhost:3000/assets/images/products/tenisDownshifter/downshifter12_main.webp"
+                },
+                {
+                    "id": 16,
+                    "dir": "http://localhost:3000/assets/images/products/tenisDownshifter/downshifter12_side.webp"
+                },
+                {
+                    "id": 17,
+                    "dir": "http://localhost:3000/assets/images/products/tenisDownshifter/downshifter12_backwards.webp"
+                },
+                {
+                    "id": 18,
+                    "dir": "http://localhost:3000/assets/images/products/tenisDownshifter/downshifter12_up.webp"
+                },
+                {
+                    "id": 19,
+                    "dir": "http://localhost:3000/assets/images/products/tenisDownshifter/downshifter12_down.webp"
+                }
             ]
         },
         {
@@ -71,14 +149,29 @@
             "nome": "Apple Watch SE",
             "descricao": "A caixa de alumínio é leve e feita com uma liga de alumínio aeroespacial 100% reciclado. A pulseira esportiva é feita de fluorelastômero resistente e surpreendentemente macio e vem com um fecho inovador, em forma de pino. Requer iPhone 8 ou posterior com iOS 16 ou posterior. Atenção: não vem com adaptador de energia.",
             "valor": 3799,
-            "marca": { "id": 4, "nome": "Apple" },
+            "marca": {
+                "id": 4,
+                "nome": "Apple"
+            },
             "categories": [
-                { "id": 1, "nome": "Eletrônico" },
-                { "id": 3, "nome": "Vestível" }
+                {
+                    "id": 1,
+                    "nome": "Eletrônico"
+                },
+                {
+                    "id": 3,
+                    "nome": "Vestível"
+                }
             ],
             "imagens": [
-                { "id": 20, "dir": "http://localhost:3000/assets/images/products/applewatch/applewatch_main.jpg" },
-                { "id": 21, "dir": "http://localhost:3000/assets/images/products/applewatch/applewatch_frontside.jpg" }
+                {
+                    "id": 20,
+                    "dir": "http://localhost:3000/assets/images/products/applewatch/applewatch_main.jpg"
+                },
+                {
+                    "id": 21,
+                    "dir": "http://localhost:3000/assets/images/products/applewatch/applewatch_frontside.jpg"
+                }
             ]
         },
         {
@@ -86,14 +179,29 @@
             "nome": "Camisa Nike Brasil I 2022/23 Torcedor Pro Masculina",
             "descricao": "Assim como outras camisas da nossa coleção Stadium, esse modelo combina detalhes de design de réplica com tecido que absorve o suor para oferecer um visual preparado para o jogo e inspirado no seu time favorito.",
             "valor": 349.99,
-            "marca": { "id": 3, "nome": "Nike" },
+            "marca": {
+                "id": 3,
+                "nome": "Nike"
+            },
             "categories": [
-                { "id": 3, "nome": "Vestível" }
+                {
+                    "id": 3,
+                    "nome": "Vestível"
+                }
             ],
             "imagens": [
-                { "id": 22, "dir": "http://localhost:3000/assets/images/products/camisabrasil-pro1/camisabrasil-pro1_main.webp" },
-                { "id": 23, "dir": "http://localhost:3000/assets/images/products/camisabrasil-pro1/camisabrasil-pro1_backwards.webp" },
-                { "id": 24, "dir": "http://localhost:3000/assets/images/products/camisabrasil-pro1/camisabrasil-pro1_brasao.jpg" }
+                {
+                    "id": 22,
+                    "dir": "http://localhost:3000/assets/images/products/camisabrasil-pro1/camisabrasil-pro1_main.webp"
+                },
+                {
+                    "id": 23,
+                    "dir": "http://localhost:3000/assets/images/products/camisabrasil-pro1/camisabrasil-pro1_backwards.webp"
+                },
+                {
+                    "id": 24,
+                    "dir": "http://localhost:3000/assets/images/products/camisabrasil-pro1/camisabrasil-pro1_brasao.jpg"
+                }
             ]
         },
         {
@@ -101,13 +209,25 @@
             "nome": "SSD Kingston SATA A400 960GB",
             "descricao": "A unidade de estado sólido A400 da Kingston aumenta drasticamente a resposta do seu computador com tempos incríveis de inicialização, carregamento e transferência, comparados a discos rígidos mecânicos. Reforçado com uma controladora de última geração para velocidades de leitura e gravação de até 500MB/s e 450MB/s1, este SSD é 10x mais rápido do que um disco rígido tradicional para melhor desempenho, resposta ultra-rápida em multitarefas e um computador mais rápido de modo geral.",
             "valor": 429.99,
-            "marca": { "id": 5, "nome": "Kingston" },
+            "marca": {
+                "id": 5,
+                "nome": "Kingston"
+            },
             "categories": [
-                { "id": 4, "nome": "Hardware" }
+                {
+                    "id": 4,
+                    "nome": "Hardware"
+                }
             ],
             "imagens": [
-                { "id": 25, "dir": "http://localhost:3000/assets/images/products/ssdking960/ssd-960gb_main.webp" },
-                { "id": 26, "dir": "http://localhost:3000/assets/images/products/ssdking960/ssd-960gb_box.jpg" }
+                {
+                    "id": 25,
+                    "dir": "http://localhost:3000/assets/images/products/ssdking960/ssd-960gb_main.webp"
+                },
+                {
+                    "id": 26,
+                    "dir": "http://localhost:3000/assets/images/products/ssdking960/ssd-960gb_box.jpg"
+                }
             ]
         },
         {
@@ -115,12 +235,51 @@
             "nome": "Smart TV Samsung Tizen HD T4300 32\" 2020, HDR",
             "descricao": "Sua Smart TV com conteúdos ainda mais fáceis de acessar. Acesse suas músicas, filmes, notícias, jogos e redes sociais tudo em uma única tela, com o sistema operacional TIZEN.",
             "valor": 1253.05,
-            "marca": { "id": 1, "nome": "Samsung" },
+            "marca": {
+                "id": 1,
+                "nome": "Samsung"
+            },
             "categories": [
-                { "id": 2, "nome": "Eletrodoméstico" }
+                {
+                    "id": 2,
+                    "nome": "Eletrodoméstico"
+                }
             ],
             "imagens": [
-                { "id": 12, "dir": "http://localhost:3000/assets/images/products/smarttv32pol/smarttv-32pol_main.webp" }
+                {
+                    "id": 12,
+                    "dir": "http://localhost:3000/assets/images/products/smarttv32pol/smarttv-32pol_main.webp"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "nome": "Air Fryer Sem Óleo Britânia Bella Cuccina BCFR02P 3L, 1300W, 127V, Antiaderente, Preto",
+            "descricao": "Com maior eficiência no preparo dos alimentos, a Fritadeira Air Fryer é a sua melhor opção para uma alimentação mais saúdavel e com agilidade no preparo. Com capacidade útil de 3,5 Litros no cesto, a Ayr fryer da Britânia cozinha de forma deliciosa seus alimentos com pouco ou nenhum óleo. Além de não precisar untar e ter facil limpeza. Desfrute de toda praticidade da Air Fryer Bella Cuccina BCFR02P Antiaderente 3L 1300W para preparar as mais variadas receitas em instantes.",
+            "valor": 289.99,
+            "marca": {
+                "id": 6,
+                "nome": "Britânia"
+            },
+            "categories": [
+                {
+                    "id": 2,
+                    "nome": "Eletrodoméstico"
+                }
+            ],
+            "imagens": [
+                {
+                    "id": 12,
+                    "dir": "http://localhost:3000/assets/images/products/airfryer/airfryer_main.jpg"
+                },
+                {
+                    "id": 12,
+                    "dir": "http://localhost:3000/assets/images/products/airfryer/airfryer_aberta.jpg"
+                },
+                {
+                    "id": 12,
+                    "dir": "http://localhost:3000/assets/images/products/airfryer/airfryer_cuba.jpg"
+                }
             ]
         }
     ],
@@ -132,7 +291,10 @@
                         "id": 8,
                         "nome": "Smart TV Samsung Tizen HD T4300 32\" 2020, HDR",
                         "valor": 1253.05,
-                        "marca": { "id": 1, "nome": "Samsung" }
+                        "marca": {
+                            "id": 1,
+                            "nome": "Samsung"
+                        }
                     },
                     "quantity": 1
                 },
@@ -141,7 +303,10 @@
                         "id": 4,
                         "nome": "Tênis Nike Downshifter 12 Masculino - Preto+Grafite",
                         "valor": 237.49,
-                        "marca": { "id": 3, "nome": "Nike" }
+                        "marca": {
+                            "id": 3,
+                            "nome": "Nike"
+                        }
                     },
                     "quantity": 1
                 }
@@ -166,13 +331,16 @@
                         "id": 7,
                         "nome": "SSD Kingston SATA A400 960GB",
                         "valor": 429.99,
-                        "marca": { "id": 5, "nome": "Kingston" }
+                        "marca": {
+                            "id": 5,
+                            "nome": "Kingston"
+                        }
                     },
                     "quantity": 1
                 }
             ],
             "totalPrice": 429.99,
-            "paymentMethod": { 
+            "paymentMethod": {
                 "id": 3,
                 "name": "Pix"
             },
@@ -191,7 +359,10 @@
                         "id": 5,
                         "nome": "Apple Watch SE",
                         "valor": 3799,
-                        "marca": { "id": 4, "nome": "Apple" }
+                        "marca": {
+                            "id": 4,
+                            "nome": "Apple"
+                        }
                     },
                     "quantity": 1
                 },
@@ -200,7 +371,10 @@
                         "id": 4,
                         "nome": "Tênis Nike Downshifter 12 Masculino - Preto+Grafite",
                         "valor": 237.49,
-                        "marca": { "id": 3, "nome": "Nike" }
+                        "marca": {
+                            "id": 3,
+                            "nome": "Nike"
+                        }
                     },
                     "quantity": 4
                 },
@@ -209,7 +383,10 @@
                         "id": 6,
                         "nome": "Camisa Nike Brasil I 2022/23 Torcedor Pro Masculina",
                         "valor": 349.99,
-                        "marca": { "id": 3, "nome": "Nike" }
+                        "marca": {
+                            "id": 3,
+                            "nome": "Nike"
+                        }
                     },
                     "quantity": 4
                 }
@@ -226,6 +403,38 @@
             },
             "IdCliente": 1,
             "estimatedDate": "2022-10-11"
+        }
+    ],
+    "brands": [
+        {
+            "id": 1,
+            "nome": "Samsung",
+            "image_dir": "http://localhost:3000/assets/images/brands/samsung_logo.webp"
+        },
+        {
+            "id": 2,
+            "nome": "Lenovo",
+            "image_dir": "http://localhost:3000/assets/images/brands/lenovo_logo.webp"
+        },
+        {
+            "id": 3,
+            "nome": "Nike",
+            "image_dir": "http://localhost:3000/assets/images/brands/nike_logo.jpg"
+        },
+        {
+            "id": 4,
+            "nome": "Apple",
+            "image_dir": "http://localhost:3000/assets/images/brands/apple_logo.webp"
+        },
+        {
+            "id": 5,
+            "nome": "Kingston",
+            "image_dir": "http://localhost:3000/assets/images/brands/kingston_logo.webp"
+        },
+        {
+            "id": 6,
+            "nome": "Britânia",
+            "image_dir": "http://localhost:3000/assets/images/brands/britania_logo.webp"
         }
     ]
 }
