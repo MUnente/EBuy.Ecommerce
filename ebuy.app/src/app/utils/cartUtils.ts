@@ -1,5 +1,5 @@
-import { Cart } from "../models/cart";
-import { ICart } from "../models/interface/icart";
+import { Cart } from "../models/Cart";
+import { ICart } from "../models/interface/ICart";
 
 export class CartUtils {
   private static cartStructure: ICart = { products: [], totalPrice: 0 };

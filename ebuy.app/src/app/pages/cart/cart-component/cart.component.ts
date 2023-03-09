@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'src/app/models/product';
-import { Cart } from 'src/app/models/cart';
+import { IProduct } from 'src/app/models/interface/IProduct';
+import { Cart } from 'src/app/models/Cart';
 
 @Component({
   selector: 'app-cart',
@@ -11,7 +11,7 @@ export class CartComponent implements OnInit {
 
   public cart!: Cart;
 
-  getProductCategories(product: Product): string {
+  getProductCategories(product: IProduct): string {
     return product.categories.map(item => item.nome).join(', ');
   }
 

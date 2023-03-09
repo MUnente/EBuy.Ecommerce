@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Product } from 'src/app/models/product';
+import { IProduct } from 'src/app/models/interface/IProduct';
 import { ProductService } from 'src/app/services/product.api.service';
-import { param } from 'src/app/models/param';
+import { IParam } from 'src/app/models/interface/IParam';
+
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -10,10 +11,10 @@ import { param } from 'src/app/models/param';
 export class ProductsComponent implements OnInit {
   constructor (private productService: ProductService, private activatedRoute: ActivatedRoute) { }
 
-  public products!: Product[];
+  public products!: IProduct[];
 
   ngOnInit(): void {
-    let params: param[] = [];
+    let params: IParam[] = [];
 
     this.activatedRoute.snapshot.queryParamMap.keys.forEach(key => {
       params.push({ key, value: this.activatedRoute.snapshot.queryParamMap.get(key) ?? '' });

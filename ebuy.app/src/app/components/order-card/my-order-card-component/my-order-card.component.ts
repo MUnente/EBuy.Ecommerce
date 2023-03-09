@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Order } from 'src/app/models/order';
+import { IOrder } from 'src/app/models/interface/IOrder';
 import { EPaymentMethod } from 'src/app/models/enums/epaymentMethod';
 
 @Component({
@@ -14,7 +14,7 @@ import { EPaymentMethod } from 'src/app/models/enums/epaymentMethod';
 })
 export class OrderCardComponent {
   @Input()
-  public orders!: Order[];
+  public orders!: IOrder[];
 
   public getPaymentMethodIconClass(paymentMethodId: number): string {
     switch (paymentMethodId) {

@@ -1,10 +1,10 @@
-import { Product } from './product';
-import { ProductCart } from './product-cart';
+import { IProduct } from './interface/IProduct';
+import { IProductCart } from './interface/IProductCart';
 import { CartUtils } from '../utils/cartUtils';
-import { ICart } from './interface/icart';
+import { ICart } from './interface/ICart';
 
 export class Cart {
-    public products: ProductCart[] = [];
+    public products: IProductCart[] = [];
     public totalPrice: number = 0;
 
     constructor () {
@@ -17,8 +17,8 @@ export class Cart {
         return CartUtils.list();
     }
 
-    public insertProductInCart(product: Product, quantity: number): void {
-        const productInCart: ProductCart | undefined = this.products?.find(item => item.product.id === product.id);
+    public insertProductInCart(product: IProduct, quantity: number): void {
+        const productInCart: IProductCart | undefined = this.products?.find(item => item.product.id === product.id);
         
         if (productInCart)
             productInCart.quantity += quantity; // it's also modifies 'this.products[n]' by mutation

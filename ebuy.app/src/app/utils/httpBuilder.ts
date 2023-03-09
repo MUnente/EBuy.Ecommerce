@@ -1,11 +1,11 @@
 import { HttpParams } from "@angular/common/http";
-import { param } from "../models/param";
+import { IParam } from "../models/interface/IParam";
 
 interface IHttpBuilder {
     setRootRoute(rootRoute: string): void;
     setUrl(url: string): void;
     appendParam(paramKey: string, value: any): this;
-    appendParams(param: param[]): this;
+    appendParams(param: IParam[]): this;
     buildParams(): HttpParams;
     buildRoute(url?: string, rootRoute?: string): string;
     destroy(): void;
@@ -37,7 +37,7 @@ export class HttpBuilder implements IHttpBuilder {
         return this;
     }
 
-    public appendParams(params: param[]): this {
+    public appendParams(params: IParam[]): this {
         if (params) {
             params.forEach(param => {
                 this.appendParam(param.key, param.value);

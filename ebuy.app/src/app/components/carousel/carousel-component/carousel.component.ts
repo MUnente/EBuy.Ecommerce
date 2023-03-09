@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { Image } from 'src/app/models/image-carousel';
+import { IImageCarousel } from 'src/app/models/interface/IImageCarousel';
 
 @Component({
   selector: 'app-carousel',
@@ -8,5 +8,5 @@ import { Image } from 'src/app/models/image-carousel';
 })
 export class CarouselComponent {
   @Input()
-  images!: Image[];
+  images!: IImageCarousel[];
 }

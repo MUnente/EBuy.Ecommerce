@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Marca } from 'src/app/models/marca';
+import { IBrand } from 'src/app/models/interface/IBrand';
 
 @Component({
   selector: 'app-brand-card',
@@ -8,5 +8,5 @@ import { Marca } from 'src/app/models/marca';
 })
 export class BrandCardComponent {
   @Input()
-  public brands: any[] = [ {}, {}, {}, {}, {}, {}, ];
+  public brands!: IBrand[];
 }

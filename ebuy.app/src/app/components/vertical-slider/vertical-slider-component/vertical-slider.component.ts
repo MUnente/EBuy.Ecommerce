@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input } from '@angular/core';
-import { ProductImage } from 'src/app/models/product-image';
+import { IProductImage } from 'src/app/models/interface/IProductImage';
 import { tns } from 'tiny-slider';
 
 @Component({
@@ -11,7 +11,7 @@ export class VerticalSliderComponent implements AfterViewInit {
   constructor(private elementRef: ElementRef) {}
 
   @Input()
-  images: ProductImage[] | undefined;
+  images: IProductImage[] | undefined;
   
   changeImg(image: any): void {
     this.elementRef.nativeElement.querySelector('.img-expand > img').src = image.getAttribute('src');

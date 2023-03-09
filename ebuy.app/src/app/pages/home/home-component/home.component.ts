@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Image } from 'src/app/models/image-carousel';
-import { Marca } from 'src/app/models/marca';
+import { IImageCarousel } from 'src/app/models/interface/IImageCarousel';
+import { IBrand } from 'src/app/models/interface/IBrand';
 import { BrandService } from 'src/app/services/brand.api.service';
 
 @Component({
@@ -9,8 +9,8 @@ import { BrandService } from 'src/app/services/brand.api.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public brands!: Marca[];
-  public images: Image[] = [
+  public brands!: IBrand[];
+  public images: IImageCarousel[] = [
     {
       url: '../../../assets/online-shopping_banner-1600x500.jpg',
       interval: 5000,

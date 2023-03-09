@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Marca } from '../models/marca';
+import { IBrand } from '../models/interface/IBrand';
 import { HttpBuilder } from '../utils/httpBuilder';
 
 @Injectable({
@@ -15,10 +15,10 @@ export class BrandService {
     this.httpBuilder = new HttpBuilder(this.UrlService, '/brands');
   }
 
-  getBrands(): Observable<Marca[]> {
+  getBrands(): Observable<IBrand[]> {
     const urlRequest = this.httpBuilder.buildRoute();
     this.httpBuilder.destroy();
 
-    return this.http.get<Marca[]>(urlRequest);
+    return this.http.get<IBrand[]>(urlRequest);
   }
 }

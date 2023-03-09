@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Product } from 'src/app/models/product';
+import { IProduct } from 'src/app/models/interface/IProduct';
 import { ProductService } from 'src/app/services/product.api.service';
-import { Cart } from 'src/app/models/cart';
+import { Cart } from '../../../models/Cart';
 
 @Component({
   selector: 'app-product-details',
@@ -15,7 +15,7 @@ export class ProductDetailsComponent implements OnInit {
     private productService: ProductService, 
   ) { }
 
-  public product!: Product;
+  public product!: IProduct;
   public quantity: number = 1;
 
   private loadProductDetails(): void {

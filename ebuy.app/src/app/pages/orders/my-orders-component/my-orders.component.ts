@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Order } from 'src/app/models/order';
+import { IOrder } from 'src/app/models/interface/IOrder';
 import { OrderService } from 'src/app/services/order.api.service';
-import { param } from 'src/app/models/param';
+import { IParam } from 'src/app/models/interface/IParam';
 
 @Component({
   selector: 'app-orders',
@@ -10,10 +10,10 @@ import { param } from 'src/app/models/param';
 export class MyOrdersComponent implements OnInit {
   constructor (private orderService: OrderService) { }
 
-  public orders!: Order[];
+  public orders!: IOrder[];
 
   ngOnInit(): void {
-    const params: param[] = [{ key: 'IdCliente', value: 1 }];
+    const params: IParam[] = [{ key: 'IdCliente', value: 1 }];
 
     this.orderService.getOrders(params).subscribe({
       next: data => this.orders = data,

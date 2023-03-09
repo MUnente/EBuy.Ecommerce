@@ -1,4 +1,4 @@
-export interface ProductImage {
+export interface IProductImage {
     id: number | null;
     dir: string;
 }

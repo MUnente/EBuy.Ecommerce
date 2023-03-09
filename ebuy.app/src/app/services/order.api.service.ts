@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Order } from '../models/order';
+import { IOrder } from '../models/interface/IOrder';
 import { HttpBuilder } from '../utils/httpBuilder';
-import { param } from '../models/param';
+import { IParam } from '../models/interface/IParam';
 
 @Injectable()
 export class OrderService {
@@ -14,11 +14,11 @@ export class OrderService {
     this.httpBuilder = new HttpBuilder(this.UrlService, '/orders');
   }
 
-  getOrders(params: param[]): Observable<Order[]> {
+  getOrders(params: IParam[]): Observable<IOrder[]> {
     this.httpBuilder.appendParams(params);
     const urlRequest = this.httpBuilder.buildRoute();
     this.httpBuilder.destroy();
 
-    return this.http.get<Order[]>(urlRequest);
+    return this.http.get<IOrder[]>(urlRequest);
   }
 }

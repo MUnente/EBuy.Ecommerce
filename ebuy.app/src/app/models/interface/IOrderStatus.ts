@@ -1,4 +1,4 @@
-export interface OrderStatus {
+export interface IOrderStatus {
     id: number;
     name: string;
 }

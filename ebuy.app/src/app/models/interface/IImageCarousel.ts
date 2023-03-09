@@ -1,4 +1,4 @@
-export interface Image {
+export interface IImageCarousel {
     url: string;
     interval: number;
     alt: string;

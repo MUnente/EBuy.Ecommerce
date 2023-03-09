@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Product } from '../models/product';
+import { IProduct } from '../models/interface/IProduct';
 import { HttpBuilder } from '../utils/httpBuilder';
-import { param } from '../models/param';
+import { IParam } from '../models/interface/IParam';
 
 @Injectable()
 export class ProductService {
@@ -14,18 +14,18 @@ export class ProductService {
     this.httpBuilder = new HttpBuilder(this.UrlService, '/products');
   }
 
-  public getProducts(params: param[]): Observable<Product[]> {
+  public getProducts(params: IParam[]): Observable<IProduct[]> {
     this.httpBuilder.appendParams(params);
     const urlRequest = this.httpBuilder.buildRoute();
     this.httpBuilder.destroy();
 
-    return this.http.get<Product[]>(urlRequest);
+    return this.http.get<IProduct[]>(urlRequest);
   }
 
-  public getProduct(id: string): Observable<Product> {
+  public getProduct(id: string): Observable<IProduct> {
     const urlRequest = this.httpBuilder.buildRoute() + '/' + id;
     this.httpBuilder.destroy();
 
-    return this.http.get<Product>(urlRequest);
+    return this.http.get<IProduct>(urlRequest);
   }
 }
