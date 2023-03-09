@@ -15,7 +15,6 @@ import { ProductsComponent } from './products-component/products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 
 import { ProductService } from 'src/app/services/product.api.service';
-import { CartService } from 'src/app/services/cart.service';
 
 registerLocaleData(localePt);
 
@@ -35,7 +34,6 @@ registerLocaleData(localePt);
   ],
   providers: [
     ProductService,
-    CartService
   ]
 })
 export class ProductsModule { }

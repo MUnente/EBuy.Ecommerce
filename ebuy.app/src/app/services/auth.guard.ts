@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { AuthService } from './auth.service';
 
 @Injectable()
-export class AppGuard {
+export class AuthGuard {
   constructor (
     private authService: AuthService,
     private router: Router

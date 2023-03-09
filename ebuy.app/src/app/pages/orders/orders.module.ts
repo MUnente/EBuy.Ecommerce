@@ -12,12 +12,14 @@ import { NavigationModule } from 'src/app/components/navigation/navigation.modul
 import { OrderCardModule } from 'src/app/components/order-card/order-card.module';
 
 import { OrderService } from 'src/app/services/order.api.service';
+import { CreateOrderComponent } from './create-order-component/create-order.component';
 
 registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
-    MyOrdersComponent
+    MyOrdersComponent,
+    CreateOrderComponent
   ],
   imports: [
     CommonModule,

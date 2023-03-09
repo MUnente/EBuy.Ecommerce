@@ -1,34 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { CartService } from 'src/app/services/cart.service';
-import { ProductCart } from 'src/app/models/product-cart';
 import { Product } from 'src/app/models/product';
+import { Cart } from 'src/app/models/cart';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
 })
 export class CartComponent implements OnInit {
-  constructor (
-    private cartService: CartService
-  ) { }
+  constructor () { }
 
-  public totalPrice: number = 0;
-  public products!: ProductCart[];
-
-  loadProductListAndTotalPrice(): void {
-    this.products = this.cartService.listCart();
-    if (this.products.length)
-      this.totalPrice = this.getTotalPrice();
-    else 
-      this.totalPrice = 0;
-  }
+  public cart!: Cart;
 
   getProductCategories(product: Product): string {
     return product.categories.map(item => item.nome).join(', ');
-  }
-
-  getTotalPrice(): number {
-    return this.products.map(item => (item.product.valor * item.quantity)).reduce((accumulator, index) => accumulator + index);
   }
 
   deleteProduct(event: any): void {
@@ -38,18 +22,16 @@ export class CartComponent implements OnInit {
       const dialogResult: boolean = confirm('Você tem certeza que deseja remover esse produto?');
   
       if (dialogResult) {
-        this.cartService.deleteProductInCart(productCartIndex);
-        this.loadProductListAndTotalPrice();
+        this.cart.deleteProductInCart(productCartIndex);
       }
     }
   }
 
   updateQuantity(event: any): void {
-    this.cartService.updateCart(parseInt(event.currentTarget.getAttribute('productcartindex')), parseInt(event.currentTarget.value));
-    this.loadProductListAndTotalPrice();
+    this.cart.updateCart(parseInt(event.currentTarget.getAttribute('productcartindex')), parseInt(event.currentTarget.value));
   }
 
   ngOnInit(): void {
-    this.loadProductListAndTotalPrice();
+    this.cart = new Cart();
   }
 }
