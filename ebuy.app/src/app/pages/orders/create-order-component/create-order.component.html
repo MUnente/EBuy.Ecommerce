@@ -1,5 +1,76 @@
 <app-top-menu></app-top-menu>
 <div class="main-container container">
-    <p>create-order works!</p>
+    <h2 class="fs-3 my-4">Pagamento</h2>
+
+    <form class="d-flex justify-content-between">
+        <section class="row g-3 address-form">
+            <div class="col-4">
+                <label for="inputAddress" class="form-label">CEP</label>
+                <input type="address" class="form-control" id="inputCEP" placeholder="XXXXX-XXX">
+            </div>
+            <div class="col-10">
+                <label for="inputAddress" class="form-label">Logradouro</label>
+                <input type="address" class="form-control" id="inputAddress" placeholder="Rua XV de Novembro">
+            </div>
+            <div class="col-2">
+                <label for="inputAddress" class="form-label">Número</label>
+                <input type="text" class="form-control" id="inputNumber" placeholder="85">
+            </div>
+            <div class="col-12">
+                <label for="inputAddress2" class="form-label">Complemento</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, estudio ou andar">
+            </div>
+            <div class="col-md-2">
+                <label for="inputDistrict" class="form-label">Bairro</label>
+                <input type="text" class="form-control" id="inputDistrict" placeholder="Centro">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Cidade</label>
+                <input type="text" class="form-control" id="inputCity" placeholder="Campinas">
+            </div>
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">Estado</label>
+                <select id="inputState" class="form-select">
+                    <option selected>Escolha...</option>
+                    <option>...</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="row g-3 payment-form">
+            <div class="col-md-4">
+                <div class="input-group">
+                    <label for="inputPaymentMethod">Método de pagamento</label>
+                    <label class="input-group-text" for=""><i class="fa-solid fa-money-check-dollar"></i></label>
+                    <select class="form-select" aria-label="Filter select" id="inputPaymentMethod">
+                        <option selected>Escolha...</option>
+                        <option value="1">Cartão de Crédito</option>
+                        <option value="2">Boleto</option>
+                        <option value="3">Pix</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-12">
+                <label for="inputCreditCardNumber" class="form-label">Número do cartão</label>
+                <input type="text" class="form-control" id="inputCreditCardNumber" placeholder="XXXX XXXX XXXX XXXX">
+            </div>
+            <div class="col-12">
+                <label for="inputCPF" class="form-label">CPF</label>
+                <input type="text" class="form-control" id="inputCPF" placeholder="XXX.XXX.XXX-XX">
+            </div>
+            <div class="col-6">
+                <label for="inputCardExpiryDate" class="form-label">Validade do cartão</label>
+                <input type="date" class="form-control" id="inputCardExpiryDate" placeholder="MM/YYYY">
+            </div>
+            <div class="col-6">
+                <label for="inputCVV" class="form-label">CVV</label>
+                <input type="text" class="form-control" id="inputCVV" placeholder="XXX">
+            </div>
+
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Efetuar pagamento</button>
+            </div>
+        </section>
+    </form>
 </div>
 <app-footer></app-footer>

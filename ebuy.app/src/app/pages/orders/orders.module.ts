@@ -11,8 +11,9 @@ import { OrdersRoutingModule } from './orders-routing.module';
 import { NavigationModule } from 'src/app/components/navigation/navigation.module';
 import { OrderCardModule } from 'src/app/components/order-card/order-card.module';
 
-import { OrderService } from 'src/app/services/order.api.service';
 import { CreateOrderComponent } from './create-order-component/create-order.component';
+import { OrderGuard } from 'src/app/services/order.guard';
+import { OrderService } from 'src/app/services/order.api.service';
 
 registerLocaleData(localePt);
 
@@ -29,6 +30,7 @@ registerLocaleData(localePt);
     OrderCardModule
   ],
   providers: [
+    OrderGuard,
     OrderService
   ]
 })
