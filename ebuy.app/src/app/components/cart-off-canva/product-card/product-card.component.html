@@ -1,0 +1,10 @@
+<div class="card-body">
+    <p class="card-text product-name">
+        <a [routerLink]="['/products/details/' + productInCart.product.id]" (click)="removeBodyOverflowHidden()">{{ productInCart.product.nome }}</a>
+    </p>
+
+    <div class="product-quantity-price d-flex justify-content-between">
+        <p class="card-text">Quantidade: {{ productInCart.quantity }}</p>
+        <p class="card-text">Preço un.: {{ productInCart.product.valor | currency:'BRL':'symbol':'1.2-2':'pt' }}</p>
+    </div>
+</div>

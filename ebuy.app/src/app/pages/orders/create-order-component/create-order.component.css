@@ -1,0 +1,21 @@
+form {
+    width: 100;
+}
+
+section {
+    width: 45%;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+@media (min-width: 992px) {
+    form > section + form > section {
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    form > section + form > section {
+        margin-left: 10px;
+    }
+}
