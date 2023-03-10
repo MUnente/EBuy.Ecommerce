@@ -1,9 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-
-import { registerLocaleData } from "@angular/common";
-import localePt from '@angular/common/locales/pt';
+import { FormsModule } from '@angular/forms';
 
 import { MyOrdersComponent } from './my-orders-component/my-orders.component';
 
@@ -14,8 +12,7 @@ import { OrderCardModule } from 'src/app/components/order-card/order-card.module
 import { CreateOrderComponent } from './create-order-component/create-order.component';
 import { OrderGuard } from 'src/app/services/order.guard';
 import { OrderService } from 'src/app/services/order.api.service';
-
-registerLocaleData(localePt);
+import { CartOffCanvaModule } from 'src/app/components/cart-off-canva/cart-off-canva.module';
 
 @NgModule({
   declarations: [
@@ -25,9 +22,11 @@ registerLocaleData(localePt);
   imports: [
     CommonModule,
     HttpClientModule,
+    FormsModule,
     OrdersRoutingModule,
     NavigationModule,
-    OrderCardModule
+    OrderCardModule,
+    CartOffCanvaModule
   ],
   providers: [
     OrderGuard,

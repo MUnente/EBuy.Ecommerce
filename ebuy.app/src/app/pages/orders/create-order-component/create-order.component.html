@@ -1,76 +1,133 @@
 <app-top-menu></app-top-menu>
 <div class="main-container container">
-    <h2 class="fs-3 my-4">Pagamento</h2>
+    <div class="my-4 d-lg-flex justify-content-between">
+        <h2 class="fs-3">Pagamento</h2>
+        <button-cartoffcanva></button-cartoffcanva>
+    </div>
 
-    <form class="d-flex justify-content-between">
-        <section class="row g-3 address-form">
-            <div class="col-4">
-                <label for="inputAddress" class="form-label">CEP</label>
-                <input type="address" class="form-control" id="inputCEP" placeholder="XXXXX-XXX">
-            </div>
-            <div class="col-10">
-                <label for="inputAddress" class="form-label">Logradouro</label>
-                <input type="address" class="form-control" id="inputAddress" placeholder="Rua XV de Novembro">
-            </div>
-            <div class="col-2">
-                <label for="inputAddress" class="form-label">Número</label>
-                <input type="text" class="form-control" id="inputNumber" placeholder="85">
-            </div>
-            <div class="col-12">
-                <label for="inputAddress2" class="form-label">Complemento</label>
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, estudio ou andar">
-            </div>
-            <div class="col-md-2">
-                <label for="inputDistrict" class="form-label">Bairro</label>
-                <input type="text" class="form-control" id="inputDistrict" placeholder="Centro">
-            </div>
-            <div class="col-md-6">
-                <label for="inputCity" class="form-label">Cidade</label>
-                <input type="text" class="form-control" id="inputCity" placeholder="Campinas">
-            </div>
-            <div class="col-md-4">
-                <label for="inputState" class="form-label">Estado</label>
-                <select id="inputState" class="form-select">
-                    <option selected>Escolha...</option>
-                    <option>...</option>
-                </select>
-            </div>
-        </section>
+    <form>
+        <div class="d-lg-flex d-md-flex flex-lg-row flex-md-column justify-content-between">
+            <section class="billing-info shadow">
+                <h3 class="fs-5">Endereço</h3>
 
-        <section class="row g-3 payment-form">
-            <div class="col-md-4">
-                <div class="input-group">
-                    <label for="inputPaymentMethod">Método de pagamento</label>
-                    <label class="input-group-text" for=""><i class="fa-solid fa-money-check-dollar"></i></label>
-                    <select class="form-select" aria-label="Filter select" id="inputPaymentMethod">
-                        <option selected>Escolha...</option>
-                        <option value="1">Cartão de Crédito</option>
-                        <option value="2">Boleto</option>
-                        <option value="3">Pix</option>
-                    </select>
+                <div class="mt-3 row">
+                    <div class="col-12 form-group">
+                        <label for="inputSelectAddress" class="form-label">Selecione um endereço cadastrado</label>
+                        <select id="inputSelectAddress" class="form-select">
+                            <option selected>Selecione</option>
+                            <option value="1">Rua Francisco França, 99, Jd. Leopoldo, 14593-059, Osasco-SP</option>
+                            <option value="2">Rua Oswaldo Cruz, 157, Centro, 13360-041, Capivari-SP</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12">
-                <label for="inputCreditCardNumber" class="form-label">Número do cartão</label>
-                <input type="text" class="form-control" id="inputCreditCardNumber" placeholder="XXXX XXXX XXXX XXXX">
-            </div>
-            <div class="col-12">
-                <label for="inputCPF" class="form-label">CPF</label>
-                <input type="text" class="form-control" id="inputCPF" placeholder="XXX.XXX.XXX-XX">
-            </div>
-            <div class="col-6">
-                <label for="inputCardExpiryDate" class="form-label">Validade do cartão</label>
-                <input type="date" class="form-control" id="inputCardExpiryDate" placeholder="MM/YYYY">
-            </div>
-            <div class="col-6">
-                <label for="inputCVV" class="form-label">CVV</label>
-                <input type="text" class="form-control" id="inputCVV" placeholder="XXX">
-            </div>
+    
+                <div class="mt-3 row">
+                    <div class="col-6 form-group">
+                        <label for="inputAddress" class="form-label">CEP</label>
+                        <input type="text" class="form-control" id="inputCEP" placeholder="00000-000">
+                    </div>
+                </div>
+    
+                <div class="mt-3 row">
+                    <div class="col-10 form-group">
+                        <label for="inputAddress" class="form-label">Logradouro</label>
+                        <input type="address" class="form-control" id="inputAddress" placeholder="Rua XV de Novembro">
+                    </div>
+    
+                    <div class="col-2 form-group">
+                        <label for="inputNumber" class="form-label">Número</label>
+                        <input type="text" class="form-control" id="inputNumber" placeholder="85">
+                    </div>
+                </div>
+    
+                <div class="mt-3 row">
+                    <div class="col-7 form-group">
+                        <label for="inputAddress2" class="form-label">Complemento</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, estudio ou andar">
+                    </div>
+    
+                    <div class="col-5 form-group">
+                        <label for="inputDistrict" class="form-label">Bairro</label>
+                        <input type="text" class="form-control" id="inputDistrict" placeholder="Centro">
+                    </div>
+                </div>
+    
+                <div class="mt-3 row">
+                    <div class="col-md-7">
+                        <label for="inputCity" class="form-label">Cidade</label>
+                        <input type="text" class="form-control" id="inputCity" placeholder="Campinas">
+                    </div>
+    
+                    <div class="col-md-5">
+                        <label for="inputState" class="form-label">Estado</label>
+                        <select id="inputState" class="form-select">
+                            <option selected>Escolha...</option>
+                            <option>...</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="payment-info shadow">
+                <h3 class="fs-5">Informações de pagamento</h3>
+    
+                <div class="mt-3 row">
+                    <div class="col-6 form-group">
+                        <label for="inputPaymentMethod" class="form-label">Método de pagamento</label>
+                        <select id="inputPaymentMethod" class="form-select">
+                            <option value="1">Cartão de Crédito</option>
+                            <option value="2">Cartão de Débito</option>
+                            <option value="3">Boleto</option>
+                            <option value="4">Pix</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <div class="mt-3 row">
+                    <div class="col-12">
+                        <label for="inputCreditCardNumber" class="form-label">Número do cartão</label>
+                        <input type="text" class="form-control" id="inputCreditCardNumber" placeholder="XXXX XXXX XXXX XXXX">
+                    </div>
+                </div>
+    
+                <div class="mt-3 row">
+                    <div class="col-6">
+                        <label for="inputCardExpiryDate" class="form-label">Validade do cartão</label>
+                        <input type="month" class="form-control" id="inputCardExpiryDate" placeholder="MM/YYYY">
+                    </div>
+    
+                    <div class="col-6">
+                        <label for="inputCVV" class="form-label">CVV</label>
+                        <input type="number" class="form-control" id="inputCVV" placeholder="XXX" max="999">
+                    </div>
+                </div>
 
-            <div class="col-12">
-                <button type="submit" class="btn btn-primary">Efetuar pagamento</button>
+                <div class="mt-3 row">
+                    <div class="col-6">
+                        <label for="inputCPF" class="form-label">CPF</label>
+                        <input type="text" class="form-control" id="inputCPF" placeholder="XXX.XXX.XXX-XX">
+                    </div>
+
+                    <div class="col-6">
+                        <label for="inputInstallments" class="form-label">
+                            Parcelas
+                            <i class="fa-solid fa-circle-info" title="No máximo 12x sem juros"></i>
+                        </label>
+                        <input type="number" class="form-control" id="inputInstallments" placeholder="1" min="1" max="12">
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="mt-5 d-flex justify-content-between align-items-center">
+            <div>
+                <h3 class="fs-5">Total: {{ cart.totalPrice | currency:'BRL':'symbol':'1.2-2':'pt' }}</h3>
+                <p *ngIf="parcelas > 0">({{ parcelas + 'x de ' + (cart.totalPrice / parcelas | currency:'BRL':'symbol':'1.2-2':'pt') }})</p>
             </div>
-        </section>
+            <button type="submit" class="btn btn-primary p-3 fs-5">Efetuar pagamento</button>
+        </div>
     </form>
+
+    <cart-offcanva [cart]="cart"></cart-offcanva>
 </div>
 <app-footer></app-footer>
