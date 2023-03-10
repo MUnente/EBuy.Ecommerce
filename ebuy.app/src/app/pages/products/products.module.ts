@@ -3,9 +3,6 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
-import { registerLocaleData } from "@angular/common";
-import localePt from '@angular/common/locales/pt';
-
 import { ProductsRoutingModule } from './products-routing.module';
 import { NavigationModule } from 'src/app/components/navigation/navigation.module';
 import { ProductCardModule } from 'src/app/components/product-card/product-card.module';
@@ -15,8 +12,6 @@ import { ProductsComponent } from './products-component/products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 
 import { ProductService } from 'src/app/services/product.api.service';
-
-registerLocaleData(localePt);
 
 @NgModule({
   declarations: [
