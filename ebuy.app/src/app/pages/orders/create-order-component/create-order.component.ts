@@ -1,18 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Cart } from 'src/app/models/Cart';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CustomValidators } from '@narik/custom-validators';
 
 @Component({
   selector: 'app-create-order',
   templateUrl: './create-order.component.html',
   styleUrls: ['./create-order.component.css']
 })
-export class CreateOrderComponent {
+export class CreateOrderComponent implements OnInit {
   public cart: Cart;
-  public parcelas!: number;
+  public paymentForm!: FormGroup;
 
-
-  constructor () {
+  constructor (
+    private formBuilder: FormBuilder
+  ) {
     this.cart = new Cart();
-    this.parcelas = 12;
+  }
+
+  public submitPayment() {
+    console.log(this.paymentForm.get('installments'))
+  }
+
+  ngOnInit(): void {
+    this.paymentForm = this.formBuilder.group({
+      installments: ['']
+    });
   }
 }
