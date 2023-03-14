@@ -16,7 +16,6 @@ export class OrderGuard {
     | Promise<boolean | UrlTree> 
     | boolean 
     | UrlTree {
-      console.log('canActivate cai');
       return this.cart.products.length > 0;
     }
     
@@ -25,7 +24,6 @@ export class OrderGuard {
     | Promise<boolean | UrlTree> 
     | boolean 
     | UrlTree {
-      console.log('canMatch cai');
       return this.cart.products.length > 0;
     }
 }
