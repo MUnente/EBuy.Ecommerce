@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IOrder } from 'src/app/models/interface/IOrder';
-import { EPaymentMethod } from 'src/app/models/enums/epaymentMethod';
+import { EPaymentMethod } from 'src/app/models/enums/EPaymentMethod';
 
 @Component({
   selector: 'app-order-card',
@@ -20,7 +20,7 @@ export class OrderCardComponent {
     switch (paymentMethodId) {
       case EPaymentMethod.Boleto:
         return 'fa-solid fa-barcode';
-      case EPaymentMethod.CartaoCredito:
+      case EPaymentMethod.CartaoCredito || EPaymentMethod.CartaoDebito:
         return 'fa-solid fa-credit-card';
       case EPaymentMethod.Pix:
         return 'fa-brands fa-pix';

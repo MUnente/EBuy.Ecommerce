@@ -341,7 +341,7 @@
             ],
             "totalPrice": 429.99,
             "paymentMethod": {
-                "id": 3,
+                "id": 4,
                 "name": "Pix"
             },
             "address": "Rua Oswaldo Cruz, 157, Centro, 13360-041, Capivari-SP",
@@ -403,6 +403,34 @@
             },
             "IdCliente": 1,
             "estimatedDate": "2022-10-11"
+        },
+        {
+            "productsCart": [
+                {
+                    "product": {
+                        "id": 7,
+                        "nome": "SSD Kingston SATA A400 960GB",
+                        "valor": 429.99,
+                        "marca": {
+                            "id": 5,
+                            "nome": "Kingston"
+                        }
+                    },
+                    "quantity": 2
+                }
+            ],
+            "totalPrice": 859.98,
+            "paymentMethod": {
+                "id": 3,
+                "name": "Cartão de Débito"
+            },
+            "address": "Av. Armando Pires, 121, Vila Helena, 19485-931, Uberlândia-MG",
+            "orderStatus": {
+                "id": 2,
+                "name": "Entregue"
+            },
+            "IdCliente": 2,
+            "estimatedDate": "2022-12-17"
         }
     ],
     "brands": [
