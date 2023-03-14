@@ -57,29 +57,32 @@ export class CreateOrderComponent implements OnInit {
           city: data?.localidade,
           selectState: data?.ibge.substring(0,2)
         });
+
+        this.paymentForm.get('addressNumber')?.enable({ emitEvent: false });
+        this.paymentForm.get('address2')?.enable({ emitEvent: false });
       },
       error: error => console.error(error)
     });
   }
 
   private disableAddressFields(): void {
-    this.paymentForm.get('zipcode')?.disable();
-    this.paymentForm.get('address1')?.disable();
-    this.paymentForm.get('addressNumber')?.disable();
-    this.paymentForm.get('address2')?.disable();
-    this.paymentForm.get('district')?.disable();
-    this.paymentForm.get('city')?.disable();
-    this.paymentForm.get('selectState')?.disable();
+    this.paymentForm.get('zipcode')?.disable({ emitEvent: false });
+    this.paymentForm.get('address1')?.disable({ emitEvent: false });
+    this.paymentForm.get('addressNumber')?.disable({ emitEvent: false });
+    this.paymentForm.get('address2')?.disable({ emitEvent: false });
+    this.paymentForm.get('district')?.disable({ emitEvent: false });
+    this.paymentForm.get('city')?.disable({ emitEvent: false });
+    this.paymentForm.get('selectState')?.disable({ emitEvent: false });
   }
 
   private clearAddressFields(): void {
-    this.paymentForm.get('zipcode')?.setValue('');
-    this.paymentForm.get('address1')?.setValue('');
-    this.paymentForm.get('addressNumber')?.setValue('');
-    this.paymentForm.get('address2')?.setValue('');
-    this.paymentForm.get('district')?.setValue('');
-    this.paymentForm.get('city')?.setValue('');
-    this.paymentForm.get('selectState')?.setValue('select');
+    this.paymentForm.get('zipcode')?.setValue('', { emitEvent: false });
+    this.paymentForm.get('address1')?.setValue('', { emitEvent: false });
+    this.paymentForm.get('addressNumber')?.setValue('', { emitEvent: false });
+    this.paymentForm.get('address2')?.setValue('', { emitEvent: false });
+    this.paymentForm.get('district')?.setValue('', { emitEvent: false });
+    this.paymentForm.get('city')?.setValue('', { emitEvent: false });
+    this.paymentForm.get('selectState')?.setValue('select', { emitEvent: false });
   }
   
   private changeAddress(value: string): void {
@@ -91,16 +94,16 @@ export class CreateOrderComponent implements OnInit {
 
       this.disableAddressFields();
 
-      this.paymentForm.get('zipcode')?.setValue(address?.zipcode);
-      this.paymentForm.get('address1')?.setValue(address?.address1);
-      this.paymentForm.get('addressNumber')?.setValue(address?.number);
-      this.paymentForm.get('address2')?.setValue(address?.address2);
-      this.paymentForm.get('district')?.setValue(address?.district);
-      this.paymentForm.get('city')?.setValue(address?.city.name);
-      this.paymentForm.get('selectState')?.setValue(address?.city.uf.id);
+      this.paymentForm.get('zipcode')?.setValue(address?.zipcode, { emitEvent: false });
+      this.paymentForm.get('address1')?.setValue(address?.address1, { emitEvent: false });
+      this.paymentForm.get('addressNumber')?.setValue(address?.number, { emitEvent: false });
+      this.paymentForm.get('address2')?.setValue(address?.address2, { emitEvent: false });
+      this.paymentForm.get('district')?.setValue(address?.district, { emitEvent: false });
+      this.paymentForm.get('city')?.setValue(address?.city.name, { emitEvent: false });
+      this.paymentForm.get('selectState')?.setValue(address?.city.uf.id, { emitEvent: false });
     }
     else if (value === 'new') {
-      this.paymentForm.get('zipcode')?.enable();
+      this.paymentForm.get('zipcode')?.enable({ emitEvent: false });
     }
   }
 
@@ -187,22 +190,22 @@ export class CreateOrderComponent implements OnInit {
   ngOnInit(): void {
     this.paymentForm = this.formBuilder.group({
       // Address info
-      selectAddress: ['select' , CustomValidators.notIncludedIn(['new', 'select'])],
-      zipcode: [{ value: '', disabled: true }, { updateOn: 'blur' }, Validators.required],
-      address1: [{ value: '', disabled: true }, Validators.required],
-      addressNumber: [{ value: '', disabled: true }, Validators.required],
+      selectAddress: ['select', [CustomValidators.notIncludedIn(['new', 'select'])]],
+      zipcode: [{ value: '', disabled: true }, { validators: [Validators.required], updateOn: 'blur', }],
+      address1: [{ value: '', disabled: true }, { validators: [Validators.required] }],
+      addressNumber: [{ value: '', disabled: true }, { validators: [Validators.required] }],
       address2: [{ value: '', disabled: true }],
-      district: [{ value: '', disabled: true }, Validators.required],
-      city: [{ value: '', disabled: true }, Validators.required],
-      selectState: [{ value: 'select', disabled: true }, CustomValidators.notEqual('select')],
+      district: [{ value:'', disabled: true}, { validators: [Validators.required] }],
+      city: [{ value: '', disabled: true }, { validators: [Validators.required] }],
+      selectState: [{ value: 'select', disabled: true }, { validators: [CustomValidators.notEqual('select')] }],
       
       // Payment info
       selectPaymentMethod: ['1'],
-      cardNumber: ['', [Validators.required, Validators.pattern('\d{4}\ \d{4}\ \d{4}\ \d{4}')]],
-      cardExpiryDate: ['', Validators.required],
-      cvv: ['', [Validators.required, Validators.max(999)]],
-      cpf: ['', [Validators.required, Validators.pattern('^\d{3}\.\d{3}\.\d{3}\-\d{2}')]],
-      installments: ['', [Validators.required, Validators.min(1)]],
+      cardNumber: ['', { validators: [Validators.required, Validators.pattern('\d{4}\ \d{4}\ \d{4}\ \d{4}')]}],
+      cardExpiryDate: ['', { validators: [Validators.required]}],
+      cvv: ['', { validators: [Validators.required, Validators.max(999)]}],
+      cpf: ['', { validators: [Validators.required, Validators.pattern('^\d{3}\.\d{3}\.\d{3}\-\d{2}')]}],
+      installments: ['', { validators: [Validators.required, Validators.min(1)]}],
     });
 
     this.paymentForm.get('selectAddress')?.valueChanges.subscribe((value) => {
