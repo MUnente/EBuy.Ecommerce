@@ -80,27 +80,22 @@
               "sourceMap": true,
               "namedChunks": true
             }
-          },
-          "defaultConfiguration": "production"
+          }
+
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ebuy.app:build:production"
+              "buildTarget": "ebuy.app:build:production"
             },
             "development": {
-              "browserTarget": "ebuy.app:build:development"
+              "buildTarget": "ebuy.app:build:development"
             }
           },
           "defaultConfiguration": "development"
         },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "ebuy.app:build"
-          }
-        },
+
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {

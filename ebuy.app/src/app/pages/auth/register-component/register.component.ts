@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CustomValidators } from '@narik/custom-validators';
+
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -52,8 +52,10 @@ export class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    let password = new FormControl('', [Validators.required, CustomValidators.rangeLength([6, 15])]);
-    let confirmPassword = new FormControl('', [Validators.required, CustomValidators.rangeLength([6, 15]), CustomValidators.equalTo(password)]);
+
+    let password = new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(15)]);
+    // TODO: Adicionar validador customizado para igualdade de senha
+    let confirmPassword = new FormControl('', [Validators.required, Validators.minLength(6), Validators.maxLength(15)]);
 
     this.registerForm = this.formBuilder.group({
       name: ['', Validators.required],

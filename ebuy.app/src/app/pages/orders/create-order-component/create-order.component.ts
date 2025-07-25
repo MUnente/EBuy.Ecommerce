@@ -1,7 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Cart } from 'src/app/models/Cart';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { CustomValidators } from '@narik/custom-validators';
+import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+// Validador: valor não pode estar em uma lista
+export function notIncludedIn(list: any[]) {
+  return (control: AbstractControl) => {
+    return list.includes(control.value) ? { notIncludedIn: true } : null;
+  };
+}
+
+// Validador: valor não pode ser igual ao parâmetro
+export function notEqual(value: any) {
+  return (control: AbstractControl) => {
+    return control.value === value ? { notEqual: true } : null;
+  };
+}
+
 import { IFederatedState } from 'src/app/models/interface/IFederatedState';
 import { ExternalDataApiService } from 'src/app/services/external-data.api.service';
 import { EPaymentMethod } from 'src/app/models/enums/EPaymentMethod';
@@ -190,15 +203,14 @@ export class CreateOrderComponent implements OnInit {
   ngOnInit(): void {
     this.paymentForm = this.formBuilder.group({
       // Address info
-      selectAddress: ['select', [CustomValidators.notIncludedIn(['new', 'select'])]],
+      selectAddress: ['select', [notIncludedIn(['new', 'select'])]],
       zipcode: [{ value: '', disabled: true }, { validators: [Validators.required], updateOn: 'blur', }],
       address1: [{ value: '', disabled: true }, { validators: [Validators.required] }],
       addressNumber: [{ value: '', disabled: true }, { validators: [Validators.required] }],
       address2: [{ value: '', disabled: true }],
       district: [{ value:'', disabled: true}, { validators: [Validators.required] }],
       city: [{ value: '', disabled: true }, { validators: [Validators.required] }],
-      selectState: [{ value: 'select', disabled: true }, { validators: [CustomValidators.notEqual('select')] }],
-      
+      selectState: [{ value: 'select', disabled: true }, { validators: [notEqual('select')] }],
       // Payment info
       selectPaymentMethod: ['1'],
       cardNumber: ['', { validators: [Validators.required, Validators.pattern('\d{4}\ \d{4}\ \d{4}\ \d{4}')]}],
@@ -208,15 +220,16 @@ export class CreateOrderComponent implements OnInit {
       installments: ['', { validators: [Validators.required, Validators.min(1)]}],
     });
 
-    this.paymentForm.get('selectAddress')?.valueChanges.subscribe((value) => {
+
+    this.paymentForm.get('selectAddress')?.valueChanges.subscribe((value: string) => {
       this.changeAddress(value);
     });
 
-    this.paymentForm.get('zipcode')?.valueChanges.subscribe((value) => {
+    this.paymentForm.get('zipcode')?.valueChanges.subscribe((value: string) => {
       this.changeZipCode(value);
     });
 
-    this.paymentForm.get('selectPaymentMethod')?.valueChanges.subscribe((value) => {
+    this.paymentForm.get('selectPaymentMethod')?.valueChanges.subscribe((value: string) => {
       this.changePaymentInfoFormValidators(parseInt(value));
     });
   }
