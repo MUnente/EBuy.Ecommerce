@@ -4,14 +4,10 @@ import { CommonModule } from '@angular/common';
 import { TermsModalComponent } from './terms-modal-component/terms-modal.component';
 
 @NgModule({
-  declarations: [
-    TermsModalComponent
-  ],
+  // ...standalone: removido declarations...
   imports: [
     CommonModule
   ],
-  exports: [
-    TermsModalComponent
-  ]
+  // ...standalone: removido exports...
 })
 export class TermsModalModule { }

@@ -5,15 +5,11 @@ import { RouterModule } from '@angular/router';
 import { ProductCardComponent } from './product-card-component/product-card.component';
 
 @NgModule({
-  declarations: [
-    ProductCardComponent
-  ],
+  // ...standalone: removido declarations...
   imports: [
     CommonModule,
     RouterModule
   ],
-  exports: [
-    ProductCardComponent
-  ]
+  // ...standalone: removido exports...
 })
 export class ProductCardModule { }

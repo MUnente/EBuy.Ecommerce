@@ -4,14 +4,10 @@ import { CommonModule } from '@angular/common';
 import { CarouselComponent } from './carousel-component/carousel.component';
 
 @NgModule({
-  declarations: [
-    CarouselComponent
-  ],
+  // ...standalone: removido declarations...
   imports: [
     CommonModule
   ],
-  exports: [
-    CarouselComponent
-  ]
+  // ...standalone: removido exports...
 })
 export class CarouselModule { }

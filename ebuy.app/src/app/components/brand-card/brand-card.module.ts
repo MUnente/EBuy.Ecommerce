@@ -4,15 +4,11 @@ import { BrandCardComponent } from './brand-card-component/brand-card.component'
 import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [
-    BrandCardComponent
-  ],
+  // ...standalone: removido declarations...
   imports: [
     CommonModule,
     RouterModule
   ],
-  exports: [
-    BrandCardComponent
-  ]
+  // ...standalone: removido exports...
 })
 export class BrandCardModule { }

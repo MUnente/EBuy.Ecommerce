@@ -7,9 +7,7 @@ import { CartRoutingModule } from './cart-routing.module';
 import { NavigationModule } from 'src/app/components/navigation/navigation.module';
 
 @NgModule({
-  declarations: [
-    CartComponent
-  ],
+  // ...standalone: removido declarations...
   imports: [
     CommonModule,
     FormsModule,

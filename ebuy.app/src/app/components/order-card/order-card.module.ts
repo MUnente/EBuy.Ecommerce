@@ -3,14 +3,10 @@ import { CommonModule } from '@angular/common';
 import { OrderCardComponent } from './my-order-card-component/my-order-card.component';
 
 @NgModule({
-  declarations: [
-    OrderCardComponent
-  ],
+  // ...standalone: removido declarations...
   imports: [
     CommonModule
   ],
-  exports: [
-    OrderCardComponent
-  ]
+  // ...standalone: removido exports...
 })
 export class OrderCardModule { }

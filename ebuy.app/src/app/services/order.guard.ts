@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Cart } from '../models/Cart';
+import { Cart } from '../models/cart';
 
 @Injectable()
 export class OrderGuard {

@@ -8,20 +8,14 @@ import { FooterComponent } from './footer-component/footer.component';
 import { AuthService } from 'src/app/services/auth.service';
 
 @NgModule({
-  declarations: [
-    TopMenuComponent,
-    FooterComponent
-  ],
+  // ...standalone: removido declarations...
   imports: [
     CommonModule,
     RouterModule,
     FormsModule,
     ReactiveFormsModule
   ],
-  exports: [
-    TopMenuComponent,
-    FooterComponent
-  ],
+  // ...standalone: removido exports...
   providers: [
     AuthService
   ]

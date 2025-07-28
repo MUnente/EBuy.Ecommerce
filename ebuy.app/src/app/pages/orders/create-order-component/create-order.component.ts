@@ -1,5 +1,12 @@
+import { ButtonComponent } from 'src/app/components/cart-off-canva/button-component/button.component';
 import { Component, OnInit } from '@angular/core';
-import { Cart } from 'src/app/models/Cart';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { TopMenuComponent } from 'src/app/components/navigation/top-menu-component/top-menu.component';
+import { OffCanvaComponent } from 'src/app/components/cart-off-canva/off-canva-component/off-canva.component';
+import { FooterComponent } from 'src/app/components/navigation/footer-component/footer.component';
+import { Cart } from 'src/app/models/cart';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
 // Validador: valor não pode estar em uma lista
 export function notIncludedIn(list: any[]) {
@@ -23,6 +30,16 @@ import { IAddress } from 'src/app/models/interface/IAddress';
 
 @Component({
   selector: 'app-create-order',
+  standalone: true,
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    RouterModule,
+    TopMenuComponent,
+    OffCanvaComponent,
+    FooterComponent,
+    ButtonComponent
+  ],
   templateUrl: './create-order.component.html',
   styleUrls: ['./create-order.component.css']
 })

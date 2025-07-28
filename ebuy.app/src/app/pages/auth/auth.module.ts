@@ -12,11 +12,7 @@ import { AuthService } from 'src/app/services/auth.service';
 import { LogoCenterComponent } from './components/logo-center/logo-center.component';
 
 @NgModule({
-  declarations: [
-    LoginComponent,
-    RegisterComponent,
-    LogoCenterComponent
-  ],
+  // ...standalone: removido declarations...
   imports: [
     CommonModule,
     FormsModule,

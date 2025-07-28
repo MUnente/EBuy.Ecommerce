@@ -14,10 +14,7 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { ProductService } from 'src/app/services/product.api.service';
 
 @NgModule({
-  declarations: [
-    ProductsComponent,
-    ProductDetailsComponent
-  ],
+  // ...standalone: removido declarations...
   imports: [
     CommonModule,
     ProductsRoutingModule,

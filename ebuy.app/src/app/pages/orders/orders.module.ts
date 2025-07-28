@@ -20,10 +20,7 @@ import { UserApiService } from 'src/app/services/user.api.service';
 
 
 @NgModule({
-  declarations: [
-    MyOrdersComponent,
-    CreateOrderComponent
-  ],
+  // ...standalone: removido declarations...
   imports: [
     CommonModule,
     HttpClientModule,

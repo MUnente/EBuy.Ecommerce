@@ -13,13 +13,12 @@ import { AuthService } from './services/auth.service';
 registerLocaleData(localePt);
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
   imports: [
+    AppComponent,
     BrowserModule,
     AppRoutingModule,
   ],
+  // ...existing code...
   providers: [
     AuthService,
     AuthGuard

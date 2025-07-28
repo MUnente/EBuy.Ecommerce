@@ -3,14 +3,10 @@ import { CommonModule } from '@angular/common';
 import { VerticalSliderComponent } from './vertical-slider-component/vertical-slider.component';
 
 @NgModule({
-  declarations: [
-    VerticalSliderComponent
-  ],
+  // ...standalone: removido declarations...
   imports: [
     CommonModule
   ],
-  exports: [
-    VerticalSliderComponent
-  ]
+  // ...standalone: removido exports...
 })
 export class VerticalSliderModule { }

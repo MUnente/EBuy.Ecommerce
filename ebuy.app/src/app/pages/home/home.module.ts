@@ -12,9 +12,7 @@ import { HomeComponent } from './home-component/home.component';
 import { BrandService } from 'src/app/services/brand.api.service';
 
 @NgModule({
-  declarations: [
-    HomeComponent
-  ],
+  // ...standalone: removido declarations...
   imports: [
     CommonModule,
     HttpClientModule,

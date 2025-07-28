@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { LogoCenterComponent } from '../components/logo-center/logo-center.component';
+import { TermsModalComponent } from 'src/app/components/terms-modal/terms-modal-component/terms-modal.component';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -6,6 +11,14 @@ import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register-component',
+  standalone: true,
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    RouterModule,
+    LogoCenterComponent,
+    TermsModalComponent
+  ],
   templateUrl: './register.component.html',
 })
 export class RegisterComponent implements OnInit {

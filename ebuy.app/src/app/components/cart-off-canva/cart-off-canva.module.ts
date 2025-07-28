@@ -7,18 +7,11 @@ import { ButtonComponent } from './button-component/button.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 
 @NgModule({
-  declarations: [
-    OffCanvaComponent,
-    ButtonComponent,
-    ProductCardComponent
-  ],
+  // ...standalone: removido declarations...
   imports: [
     CommonModule,
     RouterModule
   ],
-  exports: [
-    OffCanvaComponent,
-    ButtonComponent
-  ]
+  // ...standalone: removido exports...
 })
 export class CartOffCanvaModule { }
