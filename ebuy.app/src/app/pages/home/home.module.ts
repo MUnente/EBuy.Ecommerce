@@ -4,10 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { NavigationModule } from '../../components/navigation/navigation.module';
-import { CarouselModule } from 'src/app/components/carousel/carousel.module';
-import { BrandCardModule } from 'src/app/components/brand-card/brand-card.module';
-
-import { HomeComponent } from './home-component/home.component';
 
 import { BrandService } from 'src/app/services/brand.api.service';
 
@@ -17,10 +13,8 @@ import { BrandService } from 'src/app/services/brand.api.service';
     CommonModule,
     HttpClientModule,
     HomeRoutingModule,
-    NavigationModule,
-    CarouselModule,
-    BrandCardModule
-  ],
+    NavigationModule
+],
   providers: [
     BrandService
   ]

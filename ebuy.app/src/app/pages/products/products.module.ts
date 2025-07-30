@@ -5,11 +5,6 @@ import { FormsModule } from '@angular/forms';
 
 import { ProductsRoutingModule } from './products-routing.module';
 import { NavigationModule } from 'src/app/components/navigation/navigation.module';
-import { ProductCardModule } from 'src/app/components/product-card/product-card.module';
-import { VerticalSliderModule } from 'src/app/components/vertical-slider/vertical-slider.module';
-
-import { ProductsComponent } from './products-component/products.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
 
 import { ProductService } from 'src/app/services/product.api.service';
 
@@ -20,10 +15,8 @@ import { ProductService } from 'src/app/services/product.api.service';
     ProductsRoutingModule,
     HttpClientModule,
     FormsModule,
-    NavigationModule,
-    ProductCardModule,
-    VerticalSliderModule
-  ],
+    NavigationModule
+],
   providers: [
     ProductService,
   ]
