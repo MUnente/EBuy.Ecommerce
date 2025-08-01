@@ -1,4 +1,5 @@
 import { Route } from '@angular/router';
+import { AuthGuard } from './services/auth.guard';
 
 export const APP_ROUTES: Route[] = [
   {
@@ -22,6 +23,8 @@ export const APP_ROUTES: Route[] = [
     path: 'orders',
     loadChildren: () =>
       import('./pages/orders/orders.routes').then((m) => m.ORDERS_ROUTES),
+      canActivate: [AuthGuard],
+      canMatch: [AuthGuard]
   },
   {
     path: 'cart',
