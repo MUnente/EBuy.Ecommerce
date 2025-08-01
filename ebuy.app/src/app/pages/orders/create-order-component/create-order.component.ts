@@ -8,6 +8,12 @@ import { OffCanvaComponent } from 'src/app/components/cart-off-canva/off-canva-c
 import { FooterComponent } from 'src/app/components/navigation/footer-component/footer.component';
 import { Cart } from 'src/app/models/cart';
 import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/forms';
+import { IFederatedState } from 'src/app/models/interface/IFederatedState';
+import { ExternalDataApiService } from 'src/app/services/external-data.api.service';
+import { EPaymentMethod } from 'src/app/models/enums/EPaymentMethod';
+import { UserApiService } from 'src/app/services/user.api.service';
+import { IAddress } from 'src/app/models/interface/IAddress';
+
 // Validador: valor não pode estar em uma lista
 export function notIncludedIn(list: any[]) {
   return (control: AbstractControl) => {
@@ -21,12 +27,6 @@ export function notEqual(value: any) {
     return control.value === value ? { notEqual: true } : null;
   };
 }
-
-import { IFederatedState } from 'src/app/models/interface/IFederatedState';
-import { ExternalDataApiService } from 'src/app/services/external-data.api.service';
-import { EPaymentMethod } from 'src/app/models/enums/EPaymentMethod';
-import { UserApiService } from 'src/app/services/user.api.service';
-import { IAddress } from 'src/app/models/interface/IAddress';
 
 @Component({
   selector: 'app-create-order',
