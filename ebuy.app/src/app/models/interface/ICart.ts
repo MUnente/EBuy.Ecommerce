@@ -1,4 +1,4 @@
-import { IProductCart } from "../interface/IProductCart";
+import { IProductCart } from "./IProductCart";
 
 export interface ICart {
     products: IProductCart[];

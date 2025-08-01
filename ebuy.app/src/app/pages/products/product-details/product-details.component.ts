@@ -1,11 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { TopMenuComponent } from 'src/app/components/navigation/top-menu-component/top-menu.component';
+import { VerticalSliderComponent } from 'src/app/components/vertical-slider/vertical-slider-component/vertical-slider.component';
+import { FooterComponent } from 'src/app/components/navigation/footer-component/footer.component';
 import { ActivatedRoute } from '@angular/router';
 import { IProduct } from 'src/app/models/interface/IProduct';
 import { ProductService } from 'src/app/services/product.api.service';
-import { Cart } from '../../../models/Cart';
+import { Cart } from '../../../models/cart';
 
 @Component({
   selector: 'app-product-details',
+  standalone: true,
+  imports: [
+    CommonModule,
+    FormsModule,
+    RouterModule,
+    TopMenuComponent,
+    VerticalSliderComponent,
+    FooterComponent
+  ],
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.css']
 })

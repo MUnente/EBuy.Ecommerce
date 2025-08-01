@@ -1,4 +1,4 @@
-import { Cart } from "../models/Cart";
+import { Cart } from "../models/cart";
 import { ICart } from "../models/interface/ICart";
 
 export class CartUtils {

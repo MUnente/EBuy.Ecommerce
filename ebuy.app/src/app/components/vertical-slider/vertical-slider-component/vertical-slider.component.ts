@@ -2,8 +2,12 @@ import { AfterViewInit, Component, ElementRef, Input } from '@angular/core';
 import { IProductImage } from 'src/app/models/interface/IProductImage';
 import { tns } from 'tiny-slider';
 
+import { CommonModule } from '@angular/common';
+
 @Component({
   selector: 'app-vertical-slider',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './vertical-slider.component.html',
   styleUrls: ['./vertical-slider.component.css']
 })

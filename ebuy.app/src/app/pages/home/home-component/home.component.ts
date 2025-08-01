@@ -1,10 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TopMenuComponent } from 'src/app/components/navigation/top-menu-component/top-menu.component';
+import { CarouselComponent } from 'src/app/components/carousel/carousel-component/carousel.component';
+import { BrandCardComponent } from 'src/app/components/brand-card/brand-card-component/brand-card.component';
+import { FooterComponent } from 'src/app/components/navigation/footer-component/footer.component';
 import { IImageCarousel } from 'src/app/models/interface/IImageCarousel';
 import { IBrand } from 'src/app/models/interface/IBrand';
 import { BrandService } from 'src/app/services/brand.api.service';
 
 @Component({
   selector: 'app-home',
+  standalone: true,
+  imports: [
+    CommonModule,
+    TopMenuComponent,
+    CarouselComponent,
+    BrandCardComponent,
+    FooterComponent
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

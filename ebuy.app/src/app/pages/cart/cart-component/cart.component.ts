@@ -1,10 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TopMenuComponent } from 'src/app/components/navigation/top-menu-component/top-menu.component';
+import { FooterComponent } from 'src/app/components/navigation/footer-component/footer.component';
 import { IProduct } from 'src/app/models/interface/IProduct';
-import { Cart } from 'src/app/models/Cart';
+import { Cart } from 'src/app/models/cart';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
+  standalone: true,
+  imports: [
+    CommonModule,
+    TopMenuComponent,
+    FooterComponent
+  ],
   templateUrl: './cart.component.html',
 })
 export class CartComponent implements OnInit {

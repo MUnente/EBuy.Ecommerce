@@ -1,11 +1,22 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { LogoCenterComponent } from '../components/logo-center/logo-center.component';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { CustomValidators } from '@narik/custom-validators';
+
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-auth',
+  standalone: true,
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    RouterModule,
+    LogoCenterComponent
+  ],
   templateUrl: './login.component.html',
 })
 export class LoginComponent implements OnInit {
@@ -54,7 +65,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
       email: ['', Validators.email],
-      password: ['', [Validators.required, CustomValidators.rangeLength([6, 16])]]
+      password: ['', [Validators.required, Validators.minLength(6), Validators.maxLength(16)]]
     });
   }
 }

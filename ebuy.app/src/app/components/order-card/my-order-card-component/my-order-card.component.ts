@@ -1,9 +1,12 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { IOrder } from 'src/app/models/interface/IOrder';
 import { EPaymentMethod } from 'src/app/models/enums/EPaymentMethod';
 
 @Component({
   selector: 'app-order-card',
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './my-order-card.component.html',
   styles: [
     `
