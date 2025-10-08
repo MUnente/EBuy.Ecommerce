@@ -80,7 +80,7 @@
             "id": 3,
             "nome": "Samsung Lavadora WW4000 10Kg",
             "descricao": "Se você procura praticidade, economia de tempo e energia e um design moderno para a sua casa a lavadora de roupas Samsung WW4000 é o eletrodoméstico ideal para você! Ela conta com porta frontal apresentando mais performance de lavagem, além de gastar menos água e energia. Tem 10kg de capacidade, cesto inox e motor Digital Inverter resultando em menos ruído e melhor eficiência energética. Ah! Vale ressaltar que possui água fria, 11 programas de lavagem e lavagem do tambor ECO que vão tornar a sua rotina super versátil. Com um design moderno, ela limpa com delicadeza sem danificar os tecidos e ainda combina com a sua casa! Atenção: Não é lava e seca.",
-            "valor": 2706.60,
+            "valor": 2706.6,
             "marca": {
                 "id": 1,
                 "nome": "Samsung"
@@ -279,6 +279,146 @@
                 {
                     "id": 12,
                     "dir": "http://localhost:3000/assets/images/products/airfryer/airfryer_cuba.jpg"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "nome": "Notebook Lenovo LOQ 15 RTX 4050",
+            "descricao": "Projetado para gamers e criadores, o Lenovo LOQ 15 combina processador Intel Core i7 de 13ª geração, GPU NVIDIA GeForce RTX 4050 e tela de 15,6 polegadas 144 Hz. O sistema térmico ColdFront mantém a performance estável enquanto o SSD NVMe de 512GB e 16GB de RAM aceleram multitarefas exigentes.",
+            "valor": 7299.9,
+            "marca": {
+                "id": 2,
+                "nome": "Lenovo"
+            },
+            "categories": [
+                {
+                    "id": 1,
+                    "nome": "Eletrônico"
+                }
+            ],
+            "imagens": [
+                {
+                    "id": 31,
+                    "dir": "http://localhost:3000/assets/images/products/lenovoLOQ15/loq_main.jpg"
+                },
+                {
+                    "id": 32,
+                    "dir": "http://localhost:3000/assets/images/products/lenovoLOQ15/loq_up.jpg"
+                },
+                {
+                    "id": 33,
+                    "dir": "http://localhost:3000/assets/images/products/lenovoLOQ15/loq_side.jpg"
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "nome": "Smart TV Samsung Neo QLED 65 Polegadas 4K QN85C",
+            "descricao": "A Neo QLED QN85C oferece iluminação Mini LED com controle individual, processador Neural Quantum 4K e áudio Dolby Atmos integrado. A tela de 65 polegadas entrega contraste preciso, sistema Tizen atualizado e múltiplos assistentes de voz para tornar a sala o hub da casa conectada.",
+            "valor": 8999.0,
+            "marca": {
+                "id": 1,
+                "nome": "Samsung"
+            },
+            "categories": [
+                {
+                    "id": 1,
+                    "nome": "Eletrônico"
+                }
+            ],
+            "imagens": [
+                {
+                    "id": 34,
+                    "dir": "http://localhost:3000/assets/images/products/smarttvNeoQled65pol/neo_qled_main.jpg"
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "nome": "Tênis Nike Pegasus 40 Masculino Cinza/Azul",
+            "descricao": "O Pegasus 40 mantém amortecimento Nike React aliado a duas unidades Air Zoom para treinos diários mais suaves. O cabedal em mesh respirável abraça o pé com suporte enquanto a sola de borracha com ranhuras flexíveis garante tração em asfalto ou esteira.",
+            "valor": 749.99,
+            "marca": {
+                "id": 3,
+                "nome": "Nike"
+            },
+            "categories": [
+                {
+                    "id": 3,
+                    "nome": "Vestível"
+                }
+            ],
+            "imagens": [
+                {
+                    "id": 35,
+                    "dir": "http://localhost:3000/assets/images/products/tenisPegasus/nike_pegasus_main.jpg"
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "nome": "Fone de Ouvido Apple AirPods Max Midnight",
+            "descricao": "Os AirPods Max combinam audio de alta fidelidade com cancelamento ativo de ruido, modo Transparencia e audio espacial. A construcao em aluminio anodizado e a haste em malha respiravel garantem conforto duradouro nas maratonas de musica ou video.",
+            "valor": 6499.0,
+            "marca": {
+                "id": 4,
+                "nome": "Apple"
+            },
+            "categories": [
+                {
+                    "id": 1,
+                    "nome": "Eletronico"
+                }
+            ],
+            "imagens": [
+                {
+                    "id": 36,
+                    "dir": "http://localhost:3000/assets/images/products/airpods/airpods_main.jpg"
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "nome": "Monitor Gamer Samsung Odyssey G6 27 Polegadas QHD 240Hz",
+            "descricao": "O Odyssey G6 entrega painel QLED de 27 polegadas com resolucao QHD, taxa de atualizacao de 240 Hz e resposta de 1 ms. O design curvo 1000R e o suporte a FreeSync Premium Pro mantem a jogabilidade fluida mesmo em batalhas intensas.",
+            "valor": 4499.9,
+            "marca": {
+                "id": 1,
+                "nome": "Samsung"
+            },
+            "categories": [
+                {
+                    "id": 1,
+                    "nome": "Eletronico"
+                }
+            ],
+            "imagens": [
+                {
+                    "id": 37,
+                    "dir": "http://localhost:3000/assets/images/products/odysseyg6/odysseyg6_main.jpg"
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "nome": "SSD Kingston Fury Renegade 2TB NVMe PCIe 4.0",
+            "descricao": "O Kingston Fury Renegade NVMe 2TB atinge velocidades de ate 7300 MB/s para ler e 7000 MB/s para gravar, acelerando PCs gamer e estacoes de criacao. O dissipador em grafite ajuda a manter temperaturas controladas durante cargas pesadas.",
+            "valor": 1799.99,
+            "marca": {
+                "id": 5,
+                "nome": "Kingston"
+            },
+            "categories": [
+                {
+                    "id": 4,
+                    "nome": "Hardware"
+                }
+            ],
+            "imagens": [
+                {
+                    "id": 38,
+                    "dir": "http://localhost:3000/assets/images/products/ssdkingfury2tb/ssdKing2tb_main.jpg"
                 }
             ]
         }
