@@ -1,0 +1,39 @@
+<nav *ngIf="totalPages > 1" aria-label="Pagination" class="pagination-wrapper">
+  <ul class="pagination mb-0">
+    <li class="page-item" [class.disabled]="currentPage === 1">
+      <button
+        type="button"
+        class="page-link"
+        (click)="goToPrevious()"
+        [disabled]="currentPage === 1"
+        aria-label="Previous page"
+      >
+        &laquo;
+      </button>
+    </li>
+
+    <li *ngFor="let page of pages" class="page-item" [class.active]="page === currentPage">
+      <button
+        type="button"
+        class="page-link"
+        (click)="goTo(page)"
+        [attr.aria-current]="page === currentPage ? 'page' : null"
+        [disabled]="page === currentPage"
+      >
+        {{ page }}
+      </button>
+    </li>
+
+    <li class="page-item" [class.disabled]="currentPage === totalPages">
+      <button
+        type="button"
+        class="page-link"
+        (click)="goToNext()"
+        [disabled]="currentPage === totalPages"
+        aria-label="Next page"
+      >
+        &raquo;
+      </button>
+    </li>
+  </ul>
+</nav>

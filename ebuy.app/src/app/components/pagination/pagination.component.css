@@ -1,0 +1,14 @@
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination .page-link {
+  min-width: 2.5rem;
+  text-align: center;
+}
+
+.pagination .page-item.disabled .page-link {
+  pointer-events: none;
+}

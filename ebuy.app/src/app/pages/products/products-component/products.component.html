@@ -2,8 +2,15 @@
 
 <div class="main-container container">
     <h2 class="fs-3 my-4">Produtos</h2>
-    
-    <app-product-card [products]="products" class="row row-cols-1 row-cols-md-2 row-cols-lg-4 gy-5"></app-product-card>
+
+    <app-product-card [products]="paginatedProducts" class="row row-cols-1 row-cols-md-2 row-cols-lg-4 gy-5"></app-product-card>
+
+    <app-pagination
+        [totalItems]="products.length"
+        [pageSize]="pageSize"
+        [currentPage]="currentPage"
+        (pageChange)="onPageChange($event)">
+    </app-pagination>
 </div>
 
 <app-footer></app-footer>
