@@ -1,0 +1,90 @@
+<nav class="pagination" aria-label="Pagination" *ngIf="totalPagesInternal > 1 || showPageSizeSelect">
+  <div class="pagination__size" *ngIf="showPageSizeSelect && normalizedPageSizeOptions.length">
+    <label class="pagination__size-label">
+      <span>Items per page</span>
+      <select
+        class="pagination__size-select"
+        [value]="pageSize"
+        (change)="onPageSizeChange($any($event.target).value)"
+        [disabled]="disabled"
+      >
+        <option *ngFor="let option of normalizedPageSizeOptions" [value]="option">
+          {{ option }}
+        </option>
+      </select>
+    </label>
+  </div>
+
+  <ul class="pagination__list" *ngIf="totalPagesInternal > 1">
+    <li class="pagination__item" *ngIf="boundaryLinks">
+      <button
+        type="button"
+        class="pagination__button"
+        [disabled]="disabled || currentPage === 1"
+        (click)="goToFirst()"
+        aria-label="First page"
+      >
+        &laquo;
+      </button>
+    </li>
+
+    <li class="pagination__item" *ngIf="directionLinks">
+      <button
+        type="button"
+        class="pagination__button"
+        [disabled]="disabled || currentPage === 1"
+        (click)="goToPrevious()"
+        aria-label="Previous page"
+      >
+        &lsaquo;
+      </button>
+    </li>
+
+    <li
+      class="pagination__item"
+      *ngFor="let entry of pages"
+      [class.is-active]="!isEllipsis(entry) && entry === currentPage"
+      [attr.aria-current]="!isEllipsis(entry) && entry === currentPage ? 'page' : null"
+    >
+      <ng-container *ngIf="isEllipsis(entry); else pageButton">
+        <span class="pagination__ellipsis" aria-hidden="true">&hellip;</span>
+      </ng-container>
+      <ng-template #pageButton>
+        <button
+          type="button"
+          class="pagination__button"
+          [class.is-active]="entry === currentPage"
+          [disabled]="disabled || entry === currentPage"
+          (click)="goToPage(entry)"
+          [attr.aria-label]="'Page ' + entry"
+        >
+          {{ entry }}
+        </button>
+      </ng-template>
+    </li>
+
+    <li class="pagination__item" *ngIf="directionLinks">
+      <button
+        type="button"
+        class="pagination__button"
+        [disabled]="disabled || currentPage === totalPagesInternal"
+        (click)="goToNext()"
+        aria-label="Next page"
+      >
+        &rsaquo;
+      </button>
+    </li>
+
+    <li class="pagination__item" *ngIf="boundaryLinks">
+      <button
+        type="button"
+        class="pagination__button"
+        [disabled]="disabled || currentPage === totalPagesInternal"
+        (click)="goToLast()"
+        aria-label="Last page"
+      >
+        &raquo;
+      </button>
+    </li>
+  </ul>
+</nav>

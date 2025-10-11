@@ -1,9 +1,21 @@
 <app-top-menu></app-top-menu>
 
 <div class="main-container container">
-    <h2 class="fs-3 my-4">Produtos</h2>
-    
-    <app-product-card [products]="products" class="row row-cols-1 row-cols-md-2 row-cols-lg-4 gy-5"></app-product-card>
+  <h2 class="fs-3 my-4">Produtos</h2>
+
+  <app-product-card
+    [products]="displayedProducts"
+    class="row row-cols-1 row-cols-md-2 row-cols-lg-4 gy-5"
+  ></app-product-card>
+
+  <div class="d-flex justify-content-center my-4" *ngIf="totalItems > pageSize">
+    <app-pagination
+      [page]="page"
+      [pageSize]="pageSize"
+      [totalItems]="totalItems"
+      (pageChange)="onPageChange($event)"
+    ></app-pagination>
+  </div>
 </div>
 
 <app-footer></app-footer>
